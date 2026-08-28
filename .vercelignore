@@ -1,0 +1,6 @@
+# Vercel Ignore - Arquivos de desenvolvimento local
+server.js
+iniciar-site.bat
+.git
+.gitignore
+README.md
