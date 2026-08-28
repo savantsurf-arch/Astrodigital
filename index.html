@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Meta Tags Otimizadas -->
+  <title>Astro Digital | Criação de Sites Profissionais & Landing Pages de Alta Conversão</title>
+  <meta name="description" content="Criamos sites profissionais e landing pages modernas para empresas, autônomos e negócios locais. Ganhe mais credibilidade e multiplique seus clientes no WhatsApp.">
+  <meta name="keywords" content="criação de sites, landing pages, site profissional, web design, desenvolvimento web, sites para negócios locais, criar site para empresas">
+  <meta name="author" content="Astro Digital">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Astro Digital | Criação de Sites Profissionais e Landing Pages">
+  <meta property="og:description" content="Seu negócio merece um site que realmente passe confiança. Conecte sua marca aos seus clientes com um site moderno e focado em conversão.">
+  <meta property="og:image" content="assets/images/logo.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'astro-green': '#00ff66',
+            'astro-emerald': '#05df72',
+            'astro-teal': '#00e5ff',
+            'astro-dark': '#030509',
+            'astro-surface': '#070b14',
+            'astro-card': '#0a101e',
+            'astro-card-border': '#1e293b',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+            tech: ['"Space Grotesk"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-astro-dark text-slate-100 antialiased selection:bg-astro-green selection:text-black relative overflow-x-hidden">
+
+  <!-- ========================================================================= -->
+  <!-- AMBIENT AURORA LIGHTS                                                     -->
+  <!-- ========================================================================= -->
+  <div class="aurora-mesh aurora-1 top-[-150px] left-1/2 -translate-x-1/2 opacity-70"></div>
+  <div class="aurora-mesh aurora-2 top-[900px] right-[-150px] opacity-60"></div>
+  <div class="aurora-mesh aurora-1 top-[2400px] left-[-200px] opacity-50"></div>
+  <div class="aurora-mesh aurora-2 top-[3800px] right-[-150px] opacity-60"></div>
+  <div class="aurora-mesh aurora-1 top-[5200px] left-1/2 -translate-x-1/2 opacity-70"></div>
+
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER / NAVBAR                                                        -->
+  <!-- ========================================================================= -->
+  <header id="main-navbar" class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-astro-green via-slate-500 to-transparent group-hover:shadow-[0_0_20px_rgba(0,255,102,0.5)] transition-all duration-300">
+            <img src="assets/images/logo.jpg" alt="Astro Digital Logo" class="w-full h-full object-cover rounded-[10px]">
+          </div>
+          <div>
+            <span class="font-heading font-black text-xl tracking-wider text-white flex items-center gap-0.5">
+              ASTRO<span class="text-astro-green">DIGITAL</span>
+            </span>
+            <span class="block text-[9px] tracking-widest text-slate-400 uppercase font-semibold">Web Design & Conversão</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#problema" class="hover:text-astro-green transition-colors">O Problema</a>
+          <a href="#solucoes" class="hover:text-astro-green transition-colors">Soluções</a>
+          <a href="#beneficios" class="hover:text-astro-green transition-colors">Benefícios</a>
+          <a href="modelos.html" class="hover:text-astro-green transition-colors text-white font-semibold flex items-center gap-1">
+            <span>Modelos</span>
+            <span class="px-1.5 py-0.5 text-[9px] rounded-full bg-astro-green text-black font-black">6+</span>
+          </a>
+          <a href="#como-funciona" class="hover:text-astro-green transition-colors">Como Funciona</a>
+          <a href="#planos" class="hover:text-astro-green transition-colors">Planos</a>
+          <a href="#faq" class="hover:text-astro-green transition-colors">FAQ</a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="#contato" data-wa-type="hero" class="glow-btn text-black font-extrabold text-sm px-6 py-3 rounded-full flex items-center gap-2 group">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Falar no WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-[#060a12]/98 backdrop-blur-2xl px-4 pt-4 pb-6 space-y-3">
+      <a href="#problema" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-astro-green hover:bg-slate-800/50">O Problema</a>
+      <a href="#solucoes" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-astro-green hover:bg-slate-800/50">Soluções</a>
+      <a href="#beneficios" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-astro-green hover:bg-slate-800/50">Benefícios</a>
+      <a href="modelos.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-astro-green font-bold hover:bg-slate-800/50 flex items-center justify-between">
+        <span>Modelos Exclusivos</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-astro-green text-black font-extrabold">6 Modelos</span>
+      </a>
+      <a href="#como-funciona" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-astro-green hover:bg-slate-800/50">Como Funciona</a>
+      <a href="#planos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-astro-green hover:bg-slate-800/50">Planos</a>
+      <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-astro-green hover:bg-slate-800/50">FAQ</a>
+      <div class="pt-2">
+        <a href="#contato" data-wa-type="hero" class="w-full glow-btn text-black font-bold text-center py-3 rounded-full flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Solicitar Orçamento</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-20">
+
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION (ALTO IMPACTO & VITRINE EXECUTIVA)                        -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative min-h-[92vh] flex items-center justify-center py-16 lg:py-24 bg-grid-cyber overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Headline & Action -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+            
+            <!-- Top Pill Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glow-badge text-xs font-bold tracking-wide uppercase">
+              <span class="w-2 h-2 rounded-full bg-astro-green animate-ping"></span>
+              <span>Presença Digital de Alta Performance</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-[1.12]">
+              <span class="text-metallic block">Seu negócio merece um site que</span>
+              <span class="text-glow-green">realmente passe confiança.</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Criamos sites profissionais e landing pages modernas para <strong class="text-white font-semibold">transformar visitantes em clientes</strong> e acelerar as vendas do seu negócio pelo WhatsApp.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+              <a href="#contato" data-wa-type="hero" class="w-full sm:w-auto glow-btn text-black font-black text-base sm:text-lg px-9 py-4 rounded-full flex items-center justify-center gap-3 group">
+                <i class="fa-brands fa-whatsapp text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                <span>Quero meu site</span>
+              </a>
+              <a href="#portfolio" class="w-full sm:w-auto glass-panel text-white font-bold text-base sm:text-lg px-8 py-4 rounded-full flex items-center justify-center gap-2 hover:text-astro-green hover:border-astro-green/50">
+                <i class="fa-regular fa-eye text-astro-green text-sm"></i>
+                <span>Ver exemplos</span>
+              </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-800/80 text-left">
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                <span class="font-medium">Design profissional</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                <span class="font-medium">100% Responsivo</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                <span class="font-medium">Carregamento rápido</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm text-slate-300">
+                <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                <span class="font-medium">Atendimento humanizado</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Luxury Executive Showcase with Floating Widgets -->
+          <div class="lg:col-span-5 relative flex items-center justify-center">
+            
+            <!-- Glow backlight behind showcase -->
+            <div class="absolute -inset-4 bg-gradient-to-tr from-astro-green/25 via-emerald-600/15 to-transparent rounded-3xl blur-3xl opacity-70"></div>
+            
+            <div class="relative w-full max-w-md">
+              
+              <!-- Main 3D Devices Showcase Frame -->
+              <div class="relative rounded-3xl overflow-hidden border-2 border-astro-green/40 shadow-2xl bg-slate-900 group">
+                <img src="assets/images/hero_showcase.jpg" alt="Astro Digital - Sites de Alta Performance" class="w-full h-auto object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                
+                <!-- Subtle bottom gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+
+                <!-- Bottom Bar Badge inside photo -->
+                <div class="absolute bottom-4 left-4 right-4 glass-panel p-3.5 rounded-2xl border border-astro-green/30 backdrop-blur-md">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-astro-green/20 flex items-center justify-center text-astro-green font-black">
+                      <i class="fa-solid fa-code text-base"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-white leading-tight">Estrutura 100% Responsiva</h4>
+                      <p class="text-[10px] text-astro-green font-semibold">Websites & Landing Pages de Elite</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Widget 1 (Top Left): 5 Estrelas Google -->
+              <div class="floating-stat-badge absolute -top-5 -left-5 sm:-left-8 p-3.5 shadow-2xl flex items-center gap-3 animate-float hidden sm:flex">
+                <div class="w-9 h-9 rounded-xl bg-astro-green/20 flex items-center justify-center text-astro-green">
+                  <i class="fa-brands fa-google text-lg"></i>
+                </div>
+                <div>
+                  <div class="flex text-amber-400 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="text-[11px] font-bold text-white">5.0 Avaliações Reais</span>
+                </div>
+              </div>
+
+              <!-- Floating Widget 2 (Top Right): Velocidade Google 100/100 -->
+              <div class="floating-stat-badge absolute -top-4 -right-4 sm:-right-6 p-3 shadow-2xl flex items-center gap-2.5 animate-float-delayed hidden sm:flex">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-black text-xs">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] text-slate-400 block">Performance</span>
+                  <span class="text-xs font-black text-emerald-400">100 / 100</span>
+                </div>
+              </div>
+
+              <!-- Floating Widget 3 (Bottom Right): WhatsApp +180% Leads -->
+              <div class="floating-stat-badge absolute -bottom-5 -right-4 sm:-right-8 p-3.5 shadow-2xl flex items-center gap-3 animate-float hidden sm:flex">
+                <div class="w-10 h-10 rounded-xl bg-astro-green flex items-center justify-center text-black font-black">
+                  <i class="fa-brands fa-whatsapp text-xl"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] text-slate-400 uppercase tracking-wider font-bold block">Novos Contatos</span>
+                  <span class="text-sm font-black text-astro-green">+180% de Vendas</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. SEÇÃO — O PROBLEMA                                                     -->
+    <!-- ========================================================================= -->
+    <section id="problema" class="py-20 lg:py-28 relative bg-[#040811]/90">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>Diagnóstico Comercial</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Seu negócio está perdendo clientes por não ter uma <span class="text-red-400 underline decoration-red-500/40 decoration-wavy">presença profissional</span> na internet?
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Quando um potencial cliente pesquisa pelo seu serviço no Google, o que ele encontra? Se a resposta for “nada” ou apenas uma rede social informal, você está deixando dinheiro na mesa.
+          </p>
+        </div>
+
+        <!-- 5 Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Card 1 -->
+          <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3">Invisível no Google</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Quando pessoas buscam pelo seu serviço na sua cidade, encontram seus concorrentes com sites bem estruturados enquanto o seu negócio nem aparece nos resultados.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3">Falta de Informações</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Clientes entram em contato com dúvidas repetitivas ou desistem antes mesmo de chamar porque não encontraram informações claras, fotos ou detalhes dos seus serviços.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3">Refém das Redes Sociais</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Você depende exclusivamente do algoritmo instável do Instagram ou do WhatsApp. Se sua conta for suspensa ou o alcance cair, suas vendas simplesmente congelam.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3">Concorrentes Parecem Maiores</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Concorrentes com serviços inferiores ao seu passam muito mais credibilidade e cobram valores maiores simplesmente porque possuem um site profissional e bem apresentado.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-red-500/40 transition-all duration-300 md:col-span-2 lg:col-span-2 reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-3">Oportunidades e Orçamentos Perdidos Diariamente</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Todos os dias, pessoas interessadas no seu nicho desistem de entrar em contato por não sentirem firmeza na apresentação da sua empresa. Sem uma página de vendas ou site oficial, o seu negócio perde vendas 24 horas por dia.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Problem Conclusion Bridge -->
+        <div class="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-slate-900 via-[#0a1224] to-slate-900 border border-astro-green/40 text-center max-w-4xl mx-auto shadow-2xl reveal-init">
+          <h3 class="text-2xl sm:text-3xl font-black font-heading text-white mb-4">
+            Um site profissional pode ser o <span class="text-astro-green">primeiro passo</span> para mudar isso.
+          </h3>
+          <p class="text-slate-300 text-base max-w-2xl mx-auto mb-6">
+            Não deixe seu negócio ser visto como amador. Tenha uma plataforma que trabalha para você 24 horas por dia gerando autoridade e novos contatos.
+          </p>
+          <a href="#solucoes" class="inline-flex items-center gap-2 font-bold text-astro-green hover:text-white transition-colors">
+            <span>Conheça as soluções que criamos para você</span>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SEÇÃO — NOSSA SOLUÇÃO                                                  -->
+    <!-- ========================================================================= -->
+    <section id="solucoes" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-cubes"></i>
+            <span>Nossos Serviços Especializados</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Nós transformamos sua ideia em uma <span class="text-glow-green">presença digital profissional.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Desenvolvemos a estrutura perfeita para o momento e objetivo do seu negócio, seja para captar leads rápidos ou construir autoridade de marca.
+          </p>
+        </div>
+
+        <!-- 4 Solutions Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Solution 1: Landing Pages -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl relative group border border-slate-800 hover:border-astro-green/50 transition-all duration-300 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-astro-green/10 border border-astro-green/30 flex items-center justify-center text-astro-green text-3xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-slate-900 text-astro-green border border-astro-green/30">Alta Conversão</span>
+              </div>
+              <h3 class="text-2xl font-bold font-heading text-white mb-3">Landing Pages</h3>
+              <p class="text-slate-300 text-base leading-relaxed mb-6">
+                Páginas criadas estrategicamente para apresentar um produto, serviço específico ou campanha de anúncios com foco total em gerar contatos e orçamentos no WhatsApp.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Copywriting focado em conversão e persuasão</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Design direto ao ponto sem distrações</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Ideal para anúncios no Meta Ads e Google Ads</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contato" data-wa-type="landing" class="inline-flex items-center gap-2 font-bold text-astro-green hover:underline">
+              <span>Quero uma Landing Page</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Solution 2: Sites Institucionais -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl relative group border border-slate-800 hover:border-astro-green/50 transition-all duration-300 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-astro-green/10 border border-astro-green/30 flex items-center justify-center text-astro-green text-3xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-building"></i>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-slate-900 text-astro-green border border-astro-green/30">Autoridade de Marca</span>
+              </div>
+              <h3 class="text-2xl font-bold font-heading text-white mb-3">Sites Institucionais</h3>
+              <p class="text-slate-300 text-base leading-relaxed mb-6">
+                Sites profissionais para empresas que querem apresentar sua marca, catálogo completo de serviços, história, equipe, valores e formulários de contato com máxima sofisticação.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Múltiplas seções ou páginas estruturadas</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Posicionamento institucional e credibilidade sólida</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Otimização para busca orgânica no Google</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contato" data-wa-type="site" class="inline-flex items-center gap-2 font-bold text-astro-green hover:underline">
+              <span>Quero um Site Institucional</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Solution 3: Sites para Negócios Locais -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl relative group border border-slate-800 hover:border-astro-green/50 transition-all duration-300 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-astro-green/10 border border-astro-green/30 flex items-center justify-center text-astro-green text-3xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-slate-900 text-astro-green border border-astro-green/30">Negócios Físicos</span>
+              </div>
+              <h3 class="text-2xl font-bold font-heading text-white mb-3">Sites para Negócios Locais</h3>
+              <p class="text-slate-300 text-base leading-relaxed mb-6">
+                Estruturas pensadas sob medida para clínicas, restaurantes, consultórios, lojas, profissionais autônomos, oficinas, imobiliárias e prestadores de serviços da sua região.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Integração com Google Maps, Waze e horários</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Botão de chamada rápida para ligação e WhatsApp</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Galeria de fotos do ambiente e depoimentos locais</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contato" data-wa-type="site" class="inline-flex items-center gap-2 font-bold text-astro-green hover:underline">
+              <span>Quero um Site para meu Negócio Local</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Solution 4: Páginas de Vendas -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl relative group border border-slate-800 hover:border-astro-green/50 transition-all duration-300 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-astro-green/10 border border-astro-green/30 flex items-center justify-center text-astro-green text-3xl group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-slate-900 text-astro-green border border-astro-green/30">Venda Direta</span>
+              </div>
+              <h3 class="text-2xl font-bold font-heading text-white mb-3">Páginas de Vendas</h3>
+              <p class="text-slate-300 text-base leading-relaxed mb-6">
+                Landing pages focadas em conversão máxima para produtos físicos, infoprodutos, cursos, mentorias e eventos, preparadas para receber tráfego em massa.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Estrutura com quebra de objeções e garantias</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Integração com checkouts (Kiwify, Hotmart, Eduzz, etc)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-astro-green text-xs"></i>
+                  <span>Elementos visuais de urgência e prova social</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contato" data-wa-type="custom" class="inline-flex items-center gap-2 font-bold text-astro-green hover:underline">
+              <span>Quero uma Página de Vendas</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. SEÇÃO — BENEFÍCIOS                                                     -->
+    <!-- ========================================================================= -->
+    <section id="beneficios" class="py-20 lg:py-28 relative bg-[#040811]/90">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-star"></i>
+            <span>Vantagens Competitivas</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Muito mais do que um <span class="text-glow-green">site bonito.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Nossos projetos unem estética de alto padrão, tecnologia moderna e psicologia de vendas para gerar resultados reais no seu faturamento.
+          </p>
+        </div>
+
+        <!-- 6 Benefits Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Benefit 1 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800/80 hover:border-astro-green/40 transition-all duration-300 group reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-astro-green/10 flex items-center justify-center text-astro-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-2.5">Mais credibilidade</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Passe uma imagem profissional, sólida e de autoridade para seus clientes logo no primeiro segundo em que acessarem seu link.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800/80 hover:border-astro-green/40 transition-all duration-300 group reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-astro-green/10 flex items-center justify-center text-astro-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-2.5">100% responsivo</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Seu site funcionando perfeitamente em celulares, tablets e computadores, com visual adaptado para cada tamanho de tela.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800/80 hover:border-astro-green/40 transition-all duration-300 group reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-astro-green/10 flex items-center justify-center text-astro-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-bolt-lightning"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-2.5">Rápido e moderno</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Experiência de navegação rápida e agradável. Páginas otimizadas que carregam sem lentidão para não perder nenhum visitante.
+            </p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800/80 hover:border-astro-green/40 transition-all duration-300 group reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-astro-green/10 flex items-center justify-center text-astro-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-2.5">Focado em conversão</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Estrutura planejada estrategicamente para guiar os olhos do visitante e transformá-lo em uma conversa de negócios no WhatsApp.
+            </p>
+          </div>
+
+          <!-- Benefit 5 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800/80 hover:border-astro-green/40 transition-all duration-300 group reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-astro-green/10 flex items-center justify-center text-astro-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-2.5">Presença online</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Tenha um endereço oficial na internet (ex: seunegocio.com.br) para divulgar em cartões, redes sociais, propostas e anúncios.
+            </p>
+          </div>
+
+          <!-- Benefit 6 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800/80 hover:border-astro-green/40 transition-all duration-300 group reveal-init">
+            <div class="w-14 h-14 rounded-2xl bg-astro-green/10 flex items-center justify-center text-astro-green text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white mb-2.5">Contato fácil</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Botões estratégicos para WhatsApp, formulários dinâmicos e links que facilitam a vida do seu cliente para fechar negócio com você.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. SEÇÃO — PORTFÓLIO & MODELOS REAIS                                      -->
+    <!-- ========================================================================= -->
+    <!-- ========================================================================= -->
+    <!-- 6. SEÇÃO — PORTFÓLIO (DESTAQUES & LINK PARA CATÁLOGO COMPLETO)           -->
+    <!-- ========================================================================= -->
+    <section id="portfolio" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-display"></i>
+            <span>Nossos Projetos</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Veja alguns projetos que <span class="text-glow-green">podemos criar para você.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Designs modernos, limpos e feitos sob medida para valorizar cada nicho de atuação no mercado.
+          </p>
+        </div>
+
+        <!-- 3 Curated Highlights -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Highlight 1: Saúde / Negócio Local -->
+          <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group reveal-init hover:border-astro-green/40 transition-all duration-300 shadow-xl">
+            <div class="relative overflow-hidden bg-slate-950 h-56">
+              <img src="assets/images/mockup_odonto.jpg" alt="Mockup Site Clínica Odonto Prime" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
+              <div class="absolute top-3 left-3">
+                <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-astro-green border border-astro-green/30 backdrop-blur-md">
+                  ★ Negócio Local
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-bold text-astro-green uppercase tracking-wider block mb-1">Clínicas & Consultórios</span>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Clínica Odonto Prime</h3>
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                Estrutura pensada para atrair pacientes particulares e agendamentos diretos pelo WhatsApp.
+              </p>
+              <a href="modelos.html" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-green"></i>
+                <span>Ver detalhes do modelo</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Highlight 2: Institucional / Advocacia -->
+          <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group reveal-init hover:border-astro-green/40 transition-all duration-300 shadow-xl">
+            <div class="relative overflow-hidden bg-slate-950 h-56">
+              <img src="assets/images/mockup_advocacia.jpg" alt="Mockup Site Advocacia" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
+              <div class="absolute top-3 left-3">
+                <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-amber-400 border border-amber-400/30 backdrop-blur-md">
+                  ★ Institucional
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-bold text-astro-green uppercase tracking-wider block mb-1">Escritórios & Empresas</span>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Silva & Associados</h3>
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                Design refinado com tom sério e elegante, focado em transmitir autoridade para clientes corporativos.
+              </p>
+              <a href="modelos.html" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-green"></i>
+                <span>Ver detalhes do modelo</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Highlight 3: Vendas / Mentoria -->
+          <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group reveal-init hover:border-astro-green/40 transition-all duration-300 shadow-xl">
+            <div class="relative overflow-hidden bg-slate-950 h-56">
+              <img src="assets/images/mockup_mentoria.jpg" alt="Mockup Landing Page Mentoria" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
+              <div class="absolute top-3 left-3">
+                <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-astro-green border border-astro-green/30 backdrop-blur-md">
+                  ★ Alta Conversão
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-bold text-astro-green uppercase tracking-wider block mb-1">Vendas & Infoprodutos</span>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Mentoria Escala Pro</h3>
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                Página de captura e vendas direta com gatilhos mentais e integração com checkout.
+              </p>
+              <a href="modelos.html" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-green"></i>
+                <span>Ver detalhes do modelo</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Big Dedicated Page Gateway Banner -->
+        <div class="mt-12 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-slate-900 via-[#0a1426] to-slate-900 border border-astro-green/40 text-center max-w-4xl mx-auto shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-6 reveal-init">
+          <div class="text-left space-y-1">
+            <span class="text-xs font-bold text-astro-green uppercase tracking-wider block">✦ Catálogo Exclusivo Completo</span>
+            <h3 class="text-xl sm:text-2xl font-black font-heading text-white">Quer ver todos os modelos disponíveis para o seu nicho?</h3>
+            <p class="text-slate-300 text-xs sm:text-sm">Restaurantes, construtoras, imobiliárias, clínicas, advogados e muito mais.</p>
+          </div>
+          <a href="modelos.html" class="w-full sm:w-auto shrink-0 glow-btn text-black font-black text-sm px-8 py-4 rounded-full flex items-center justify-center gap-2 shadow-glow-green hover:scale-105 transition-transform">
+            <span>Ver Todos os Modelos</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. SEÇÃO ESPECIAL — AUTORIDADE & ESPECIALISTA                             -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 relative bg-[#040811]/90 border-y border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Specialist Photo Column -->
+          <div class="lg:col-span-5 flex justify-center reveal-init">
+            <div class="relative max-w-md w-full">
+              <!-- Glow outline -->
+              <div class="absolute -inset-2 bg-gradient-to-tr from-astro-green via-emerald-600 to-transparent rounded-3xl blur-xl opacity-50"></div>
+              
+              <div class="relative rounded-3xl overflow-hidden border-2 border-astro-green/40 shadow-2xl bg-slate-900">
+                <img src="assets/images/specialist.jpg" alt="Especialista em Web Design Astro Digital" class="w-full h-auto object-cover object-center hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
+                
+                <!-- Bottom Floating Badge -->
+                <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-2xl border border-astro-green/30 backdrop-blur-md">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-astro-green/20 flex items-center justify-center text-astro-green font-black">
+                      <i class="fa-solid fa-shield-halved text-lg"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold text-white leading-tight">Especialista Web & Estratégia</h4>
+                      <p class="text-[11px] text-astro-green font-semibold">Fundador da Astro Digital</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Authority Copy Column -->
+          <div class="lg:col-span-7 space-y-6 reveal-init">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-handshake"></i>
+              <span>Compromisso com o seu Resultado</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+              Mais do que criar códigos, nós construímos <span class="text-glow-green">ferramentas de vendas</span> para o seu negócio.
+            </h2>
+
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+              Na <strong>Astro Digital</strong>, entendemos que um site não serve apenas para "ficar bonito". Ele precisa gerar autoridade, transmitir profissionalismo e ser fácil de usar para que o seu cliente sinta total segurança em fechar negócio com você.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                <div class="text-astro-green font-black text-lg mb-1 flex items-center gap-2">
+                  <i class="fa-solid fa-headset text-sm"></i>
+                  <span>Atendimento Direto</span>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed">Sem intermediários ou burocracia. Você conversa diretamente com quem entende e desenvolve o seu projeto.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                <div class="text-astro-green font-black text-lg mb-1 flex items-center gap-2">
+                  <i class="fa-solid fa-calendar-check text-sm"></i>
+                  <span>Pontualidade na Entrega</span>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed">Respeitamos seu tempo com prazos claros e atualizações transparentes durante cada etapa.</p>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="#contato" data-wa-type="hero" class="inline-flex items-center gap-3 glow-btn text-black font-extrabold px-8 py-4 rounded-full text-base shadow-glow-green">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Falar Diretamente Comigo</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. SEÇÃO — COMO FUNCIONA (TIMELINE)                                       -->
+    <!-- ========================================================================= -->
+    <section id="como-funciona" class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-route"></i>
+            <span>Processo Simples e Transparente</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Do primeiro contato ao seu <span class="text-glow-green">site no ar.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Você não precisa se preocupar com aspectos técnicos. Cuidamos de todo o processo para você focar no que faz de melhor: gerenciar seu negócio.
+          </p>
+        </div>
+
+        <!-- 4 Steps Timeline Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="glass-panel p-7 rounded-3xl relative border border-slate-800 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="w-12 h-12 rounded-2xl bg-astro-green text-black font-heading font-black text-xl flex items-center justify-center shadow-glow-green">01</span>
+                <i class="fa-brands fa-whatsapp text-2xl text-slate-500"></i>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Você entra em contato</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Você nos chama no WhatsApp, explica seu modelo de negócio, seus diferenciais e qual o objetivo principal que deseja alcançar com o site.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-800 text-[11px] text-astro-green font-semibold">
+              ✦ Diagnóstico Rápido e Sem Compromisso
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-panel p-7 rounded-3xl relative border border-slate-800 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="w-12 h-12 rounded-2xl bg-slate-800 text-astro-green font-heading font-black text-xl flex items-center justify-center border border-astro-green/40">02</span>
+                <i class="fa-solid fa-pen-ruler text-2xl text-slate-500"></i>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Planejamos o projeto</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Definimos a estrutura ideal da página, o roteiro de conteúdo persuasivo (copywriting) e a identidade visual que vai valorizar sua marca.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-800 text-[11px] text-astro-green font-semibold">
+              ✦ Estratégia Focada no seu Público
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-panel p-7 rounded-3xl relative border border-slate-800 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="w-12 h-12 rounded-2xl bg-slate-800 text-astro-green font-heading font-black text-xl flex items-center justify-center border border-astro-green/40">03</span>
+                <i class="fa-solid fa-code text-2xl text-slate-500"></i>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Desenvolvemos</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Criamos o site com design profissional, código otimizado, 100% responsivo para smartphones e com carregamento ultra rápido.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-800 text-[11px] text-astro-green font-semibold">
+              ✦ Qualidade e Design de Ponta
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-panel p-7 rounded-3xl relative border border-slate-800 flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="w-12 h-12 rounded-2xl bg-astro-green text-black font-heading font-black text-xl flex items-center justify-center shadow-glow-green">04</span>
+                <i class="fa-solid fa-rocket text-2xl text-slate-500"></i>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-white mb-2">Publicamos</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Seu site fica no ar com domínio oficial configurado, pronto para você divulgar para seus clientes e começar a receber pedidos e orçamentos.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-slate-800 text-[11px] text-astro-green font-semibold">
+              ✦ Pronto para Gerar Vendas
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. SEÇÃO — PLANOS                                                         -->
+    <!-- ========================================================================= -->
+    <section id="planos" class="py-20 lg:py-28 relative bg-[#040811]/90">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-tags"></i>
+            <span>Investimento Inteligente</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Escolha a solução ideal para o <span class="text-glow-green">seu negócio.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Preços transparentes, condições flexíveis e suporte dedicado. Escolha o plano que melhor atende o seu momento atual.
+          </p>
+        </div>
+
+        <!-- 3 Plans Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Plan 1: LANDING PAGE -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-slate-800 flex flex-col justify-between relative group hover:border-slate-600 transition-all reveal-init">
+            <div>
+              <div class="mb-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-1">Para Profissionais & Campanhas</span>
+                <h3 class="text-2xl font-black font-heading text-white">LANDING PAGE</h3>
+              </div>
+              <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                Ideal para profissionais autônomos, consultores e campanhas de anúncios que precisam de conversão rápida e objetiva.
+              </p>
+              
+              <div class="py-4 border-y border-slate-800/80 mb-6">
+                <span class="text-xs text-slate-400 block">Investimento Sob Consulta</span>
+                <span class="text-2xl font-black text-white">Orçamento Sob Medida</span>
+              </div>
+
+              <!-- Checklist -->
+              <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Página profissional única de alta conversão</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Design personalizado com sua marca</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>100% Responsivo (Mobile & Desktop)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Botão estratégico para WhatsApp</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Formulário de contato / captura de leads</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Publicação e configuração online</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#contato" data-wa-type="landing" class="w-full py-4 rounded-full glass-panel text-center font-bold text-white hover:text-black hover:bg-astro-green transition-all duration-300 flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Quero minha Landing Page</span>
+            </a>
+          </div>
+
+          <!-- Plan 2: SITE PROFISSIONAL (MAIS ESCOLHIDO) -->
+          <div class="popular-plan-card p-8 sm:p-10 rounded-3xl flex flex-col justify-between relative transform lg:-translate-y-4 shadow-2xl reveal-init">
+            
+            <!-- Most Popular Badge -->
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-astro-green text-black font-heading font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow-glow-green flex items-center gap-1.5">
+              <i class="fa-solid fa-fire"></i>
+              <span>Mais Escolhido</span>
+            </div>
+
+            <div>
+              <div class="mb-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-astro-green block mb-1">Para Empresas & Negócios</span>
+                <h3 class="text-2xl font-black font-heading text-white">SITE PROFISSIONAL</h3>
+              </div>
+              <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                A solução completa para empresas, clínicas e negócios locais que desejam autoridade máxima e forte presença no Google.
+              </p>
+              
+              <div class="py-4 border-y border-astro-green/20 mb-6">
+                <span class="text-xs text-astro-green font-medium block">Melhor Custo-Benefício</span>
+                <span class="text-2xl font-black text-white">Orçamento Personalizado</span>
+              </div>
+
+              <!-- Checklist -->
+              <ul class="space-y-3.5 text-sm text-slate-200 mb-8">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <strong class="text-white">Site institucional personalizado (Até 5 páginas/seções)</strong>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Design exclusivo com identidade visual completa</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>100% Responsivo e otimizado para celular</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Integração com WhatsApp e Redes Sociais</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Formulário avançado e Google Maps</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Otimização básica para o Google (SEO)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Publicação e acompanhamento pós-entrega</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#contato" data-wa-type="site" class="w-full py-4 rounded-full glow-btn text-center font-extrabold text-black text-base shadow-glow-green flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Quero meu site profissional</span>
+            </a>
+          </div>
+
+          <!-- Plan 3: PROJETO PERSONALIZADO -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-slate-800 flex flex-col justify-between relative group hover:border-slate-600 transition-all reveal-init">
+            <div>
+              <div class="mb-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-1">Para Projetos Específicos</span>
+                <h3 class="text-2xl font-black font-heading text-white">PROJETO SOB MEDIDA</h3>
+              </div>
+              <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                Para empresas que necessitam de funcionalidades avançadas, catálogos interativos, agendamentos ou sistemas integrados.
+              </p>
+              
+              <div class="py-4 border-y border-slate-800/80 mb-6">
+                <span class="text-xs text-slate-400 block">Conforme Escopo</span>
+                <span class="text-2xl font-black text-white">Sob Demanda</span>
+              </div>
+
+              <!-- Checklist -->
+              <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Estrutura 100% personalizada</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Funcionalidades específicas sob demanda</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Integração com APIs, CRMs e checkouts</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Design exclusivo de alta complexidade</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-astro-green text-base"></i>
+                  <span>Suporte prioritário e consultoria contínua</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#contato" data-wa-type="custom" class="w-full py-4 rounded-full glass-panel text-center font-bold text-white hover:text-black hover:bg-astro-green transition-all duration-300 flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Solicitar orçamento sob medida</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10 text-slate-400 text-xs">
+          💡 Dúvida sobre qual plano escolher? <a href="#contato" data-wa-type="hero" class="text-astro-green font-bold hover:underline">Chame no WhatsApp</a> e receba uma recomendação personalizada.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. SEÇÃO — DEPOIMENTOS & PROVA SOCIAL                                    -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-quote-left"></i>
+            <span>Resultados de Clientes</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Quem tem um negócio profissional, <span class="text-glow-green">mostra isso para seus clientes.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Veja a experiência de quem já transformou sua presença digital com a Astro Digital.
+          </p>
+        </div>
+
+        <!-- Testimonials Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800 relative flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed mb-6 italic">
+                "Antes nós dependíamos apenas do boca a boca e de postar no Instagram. Depois que a Astro Digital criou nossa landing page, os pedidos de orçamentos pelo WhatsApp dobraram no primeiro mês. O retorno superou todas as expectativas!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-astro-green to-emerald-700 flex items-center justify-center font-bold text-black text-sm">
+                RM
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Rodrigo Mendes</h4>
+                <p class="text-xs text-slate-400">Diretor • Mendes Engenharia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800 relative flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed mb-6 italic">
+                "O design ficou impecável, muito moderno e rápido no celular. Os pacientes elogiam bastante a facilidade de encontrar os tratamentos e agendar pelo WhatsApp. Valeu cada centavo investido."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-astro-green to-emerald-700 flex items-center justify-center font-bold text-black text-sm">
+                CF
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Dra. Camila Fontes</h4>
+                <p class="text-xs text-slate-400">Dentista • Clínica Estética</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glass-panel p-8 rounded-3xl border border-slate-800 relative flex flex-col justify-between reveal-init">
+            <div>
+              <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed mb-6 italic">
+                "A entrega foi super rápida e o atendimento foi nota 10. Eu não entendia nada de domínio e hospedagem, mas a equipe cuidou de tudo e me entregou o site pronto para divulgar. Recomendo de olhos fechados!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800">
+              <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-astro-green to-emerald-700 flex items-center justify-center font-bold text-black text-sm">
+                LA
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Lucas Andrade</h4>
+                <p class="text-xs text-slate-400">Consultor Financeiro & Investimentos</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 11. SEÇÃO — FAQ (PERGUNTAS FREQUENTES)                                     -->
+    <!-- ========================================================================= -->
+    <section id="faq" class="py-20 lg:py-28 relative bg-[#040811]/90">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center space-y-4 mb-16 reveal-init">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glow-badge text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Tire Suas Dúvidas</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Perguntas <span class="text-glow-green">Frequentes</span>
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300">
+            Respostas claras e diretas para as dúvidas mais comuns antes de começar seu projeto.
+          </p>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="space-y-4">
+          
+          <!-- FAQ Item 1 -->
+          <div class="faq-item glass-panel rounded-2xl border border-slate-800 transition-all reveal-init">
+            <button class="faq-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-base sm:text-lg font-bold font-heading text-white">Quanto custa criar um site?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/40 pt-4">
+              O valor do investimento depende do modelo do projeto (Landing Page de página única, Site Institucional com várias páginas ou Projeto com funções personalizadas). Trabalhamos com orçamentos acessíveis, sob medida para autônomos e empresas. Entre em contato pelo WhatsApp para receber uma proposta exata para o seu caso.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item glass-panel rounded-2xl border border-slate-800 transition-all reveal-init">
+            <button class="faq-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-base sm:text-lg font-bold font-heading text-white">O site funciona no celular?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/40 pt-4">
+              Sim, com 100% de precisão. Hoje mais de 80% dos acessos acontecem pelo smartphone. Por isso, todos os nossos sites são desenvolvidos com metodologia Mobile-First, garantindo encaixe perfeito, fontes legíveis e carregamento ultra rápido em celulares, tablets e computadores.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item glass-panel rounded-2xl border border-slate-800 transition-all reveal-init">
+            <button class="faq-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-base sm:text-lg font-bold font-heading text-white">Vocês criam o design e a identidade visual?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/40 pt-4">
+              Sim! Desenvolvemos todo o layout de acordo com a essência e o objetivo do seu negócio. Se você já tiver um logotipo e cores definidas, aplicamos com perfeição. Caso ainda não tenha, nós organizamos uma combinação moderna e profissional para o seu site se destacar.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item glass-panel rounded-2xl border border-slate-800 transition-all reveal-init">
+            <button class="faq-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-base sm:text-lg font-bold font-heading text-white">Eu preciso fornecer os textos e as imagens?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/40 pt-4">
+              Você pode fornecer fotos reais do seu negócio e informações básicas, mas não precisa se preocupar em redigir textos difíceis. Nós estruturamos o copywriting persuasivo e podemos complementar com imagens profissionais de alta qualidade para deixar o site incrível.
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item glass-panel rounded-2xl border border-slate-800 transition-all reveal-init">
+            <button class="faq-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-base sm:text-lg font-bold font-heading text-white">Como funciona a hospedagem e o domínio?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/40 pt-4">
+              Nós orientamos e auxiliamos em toda a configuração do seu domínio oficial (ex: seusite.com.br) e na escolha da hospedagem mais rápida e segura para o seu negócio, sem você precisar esquentar a cabeça com termos técnicos.
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item glass-panel rounded-2xl border border-slate-800 transition-all reveal-init">
+            <button class="faq-header w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="text-base sm:text-lg font-bold font-heading text-white">Quanto tempo demora para ficar pronto?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/40 pt-4">
+              O prazo médio para uma Landing Page de alta conversão costuma ser de 3 a 7 dias úteis após a entrega das informações. Sites institucionais mais robustos variam de 7 a 15 dias úteis. Trabalhamos com compromisso rigoroso de entrega no prazo.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 12. SEÇÃO — CTA FINAL (ALTO IMPACTO)                                      -->
+    <!-- ========================================================================= -->
+    <section id="contato" class="py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-[#03060c] via-[#041a10] to-[#020408]">
+      
+      <!-- Ambient Glow in CTA -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-astro-green/20 via-transparent to-transparent pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8 reveal-init">
+        
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glow-badge text-xs sm:text-sm font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Dê o Próximo Passo</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-tight">
+          Pronto para colocar seu negócio na internet?
+        </h2>
+
+        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Vamos criar um site profissional para sua empresa e transformar sua presença online em uma máquina de gerar contatos no WhatsApp.
+        </p>
+
+        <!-- Big Glowing CTA Button -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contato" data-wa-type="hero" class="w-full sm:w-auto glow-btn text-black font-black text-lg sm:text-xl px-12 py-5 rounded-full shadow-glow-green flex items-center justify-center gap-3 transition-transform hover:scale-105">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span>QUERO MEU SITE</span>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400 pt-2 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-lock text-astro-green"></i>
+          <span>Atendimento rápido via WhatsApp: (73) 98233-5157 • Resposta imediata</span>
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 13. RODAPÉ (FOOTER)                                                       -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-slate-800/80 bg-[#020408] py-14 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/60">
+        
+        <!-- Brand & Bio -->
+        <div class="space-y-4">
+          <a href="#hero" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-astro-green to-slate-700">
+              <img src="assets/images/logo.jpg" alt="Astro Digital" class="w-full h-full object-cover rounded-[10px]">
+            </div>
+            <span class="font-heading font-black text-xl tracking-wider text-white">
+              ASTRO<span class="text-astro-green">DIGITAL</span>
+            </span>
+          </a>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Especialistas em desenvolvimento de sites profissionais, landing pages de alta conversão e presença digital para empresas e profissionais autônomos.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider mb-4">Navegação</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="#hero" class="hover:text-astro-green transition-colors">Início</a></li>
+            <li><a href="#solucoes" class="hover:text-astro-green transition-colors">Nossos Serviços</a></li>
+            <li><a href="#portfolio" class="hover:text-astro-green transition-colors">Portfólio</a></li>
+            <li><a href="#como-funciona" class="hover:text-astro-green transition-colors">Como Funciona</a></li>
+            <li><a href="#planos" class="hover:text-astro-green transition-colors">Planos & Valores</a></li>
+            <li><a href="#faq" class="hover:text-astro-green transition-colors">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div>
+          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider mb-4">Soluções</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="#solucoes" class="hover:text-astro-green transition-colors">Landing Pages para Anúncios</a></li>
+            <li><a href="#solucoes" class="hover:text-astro-green transition-colors">Sites Institucionais</a></li>
+            <li><a href="#solucoes" class="hover:text-astro-green transition-colors">Sites para Negócios Locais</a></li>
+            <li><a href="#solucoes" class="hover:text-astro-green transition-colors">Páginas de Vendas (Checkout)</a></li>
+            <li><a href="#solucoes" class="hover:text-astro-green transition-colors">Otimização Mobile & SEO</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contacts -->
+        <div>
+          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider mb-4">Canais de Atendimento</h4>
+          <ul class="space-y-3 text-xs text-slate-300">
+            <li class="flex items-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-astro-green text-base"></i>
+              <a href="#contato" data-wa-type="hero" class="hover:text-astro-green transition-colors font-medium">WhatsApp: (73) 98233-5157</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-brands fa-instagram text-astro-green text-base"></i>
+              <a href="https://www.instagram.com/astro_digital01?igsi=amZ6czNiZTN1ZmIy&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-astro-green transition-colors font-medium">Instagram: @astro_digital01</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-regular fa-envelope text-astro-green text-base"></i>
+              <a href="mailto:contato@astrodigital.com.br" class="hover:text-astro-green transition-colors">contato@astrodigital.com.br</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Credits -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© <span id="current-year">2026</span> Astro Digital. Todos os direitos reservados.</p>
+        <p class="flex items-center gap-1.5">
+          <span>Desenvolvido com tecnologia de alta performance</span>
+          <i class="fa-solid fa-code text-astro-green"></i>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 14. BOTÃO FLUTUANTE DO WHATSAPP (FIXO)                                    -->
+  <!-- ========================================================================= -->
+  <a id="whatsapp-float-btn" href="#" class="whatsapp-float-btn shadow-2xl group" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+    <span class="hidden sm:inline-block">Orçamento no WhatsApp</span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- 15. MODAL DE VISUALIZAÇÃO DE PROJETOS (LIGHTBOX)                         -->
+  <!-- ========================================================================= -->
+  <div id="mockup-modal" class="fixed inset-0 z-[1000] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md transition-opacity duration-300">
+    <div class="relative w-full max-w-4xl glass-panel bg-[#090e1a]/95 rounded-3xl border border-astro-green/40 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-5 sm:px-8 border-b border-slate-800 bg-[#0c1322]">
+        <div>
+          <span id="modal-category" class="text-xs font-bold text-astro-green uppercase tracking-wider block">Categoria</span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heading text-white">Nome do Projeto</h3>
+        </div>
+        <button onclick="closeMockupModal()" class="w-10 h-10 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Image & Details) -->
+      <div class="p-5 sm:p-8 overflow-y-auto space-y-6">
+        <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-black">
+          <img id="modal-img" src="" alt="Preview do Projeto" class="w-full h-auto object-cover">
+        </div>
+        <p id="modal-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed"></p>
+      </div>
+
+      <!-- Modal Footer CTA -->
+      <div class="p-5 sm:px-8 border-t border-slate-800 bg-[#0c1322] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-xs text-slate-400 flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-astro-green"></i>
+          <span>Modelo 100% personalizável para a sua marca</span>
+        </div>
+        <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto glow-btn text-black font-extrabold text-sm px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-glow-green">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Quero um Projeto Neste Estilo</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

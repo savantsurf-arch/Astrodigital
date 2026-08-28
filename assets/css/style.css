@@ -1,0 +1,268 @@
+/* ==========================================================================
+   ASTRO DIGITAL - Ultra Luxury Tech & Dark Neon Design System
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --bg-deep: #030509;
+  --bg-surface: #070b14;
+  --bg-card: rgba(10, 16, 30, 0.7);
+  --bg-card-hover: rgba(15, 23, 42, 0.85);
+  --astro-green: #00ff66;
+  --astro-emerald: #05df72;
+  --astro-teal: #00e5ff;
+  --astro-glow: rgba(0, 255, 102, 0.4);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-glow: rgba(0, 255, 102, 0.35);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 999px;
+  border: 2px solid var(--bg-deep);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--astro-green);
+}
+
+/* Smooth Scrolling & Base */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono-tech {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Chrome / Metallic Gradient Text */
+.text-metallic {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-glow-green {
+  background: linear-gradient(135deg, #00ff66 0%, #05df72 50%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(0, 255, 102, 0.45));
+}
+
+/* Premium Glassmorphism 2.0 */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(13, 20, 36, 0.65) 0%, rgba(8, 12, 22, 0.75) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 20px 40px -15px rgba(0, 255, 102, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.glass-nav {
+  background: rgba(3, 5, 9, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Buttons with High-Impact Glow */
+.glow-btn {
+  position: relative;
+  background: linear-gradient(135deg, #00ff66 0%, #05df72 100%);
+  color: #030509;
+  font-weight: 800;
+  box-shadow: 0 0 30px rgba(0, 255, 102, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-btn:hover {
+  background: linear-gradient(135deg, #26ff7b 0%, #00e659 100%);
+  box-shadow: 0 0 45px rgba(0, 255, 102, 0.7), 0 0 15px rgba(0, 255, 102, 0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.glow-btn:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Pill Badges */
+.glow-badge {
+  background: linear-gradient(90deg, rgba(0, 255, 102, 0.1) 0%, rgba(5, 223, 114, 0.05) 100%);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  color: #00ff66;
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Animated Aurora Background Lights */
+.aurora-mesh {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  z-index: 0;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+
+.aurora-1 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(0, 255, 102, 0.15) 0%, rgba(0, 255, 102, 0) 70%);
+}
+
+.aurora-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, rgba(0, 100, 255, 0) 70%);
+  animation-duration: 16s;
+  animation-delay: -4s;
+}
+
+@keyframes auroraDrift {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.1); }
+  100% { transform: translate(-30px, 20px) scale(0.95); }
+}
+
+/* Cyber Tech Grid Background */
+.bg-grid-cyber {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* Floating Animations */
+@keyframes floatSmooth {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatSmoothDelayed {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: floatSmooth 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSmoothDelayed 6s ease-in-out 2s infinite;
+}
+
+/* Floating Badges with Glow */
+.floating-stat-badge {
+  background: rgba(8, 14, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 255, 102, 0.15);
+  border-radius: 18px;
+}
+
+/* FAQ Accordion Styling */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #00ff66;
+}
+
+.faq-item.active {
+  border-color: rgba(0, 255, 102, 0.4);
+  background: linear-gradient(135deg, rgba(16, 26, 46, 0.8) 0%, rgba(10, 16, 30, 0.85) 100%);
+  box-shadow: 0 10px 30px -10px rgba(0, 255, 102, 0.15);
+}
+
+/* Plan Card Centerpiece (Mais Escolhido) */
+.popular-plan-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(14, 28, 48, 0.95) 0%, rgba(8, 15, 28, 0.98) 100%);
+  border: 2px solid #00ff66;
+  box-shadow: 0 0 50px rgba(0, 255, 102, 0.25), inset 0 0 25px rgba(0, 255, 102, 0.06);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+  font-weight: 800;
+  font-size: 15px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: pulseGlowWhatsApp 2.4s infinite;
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.7);
+  color: #ffffff;
+}
+
+@keyframes pulseGlowWhatsApp {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+/* Reveal on scroll animations */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
