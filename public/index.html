@@ -107,6 +107,12 @@
     @keyframes pulseGlowWhatsApp { 0%, 100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 35px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0); } }
     .reveal-init { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
     .reveal-visible { opacity: 1; transform: translateY(0); }
+    .client-marquee-container { display: flex; user-select: none; overflow: hidden; position: relative; width: 100%; }
+    .client-marquee-track { display: flex; flex-shrink: 0; gap: 1.5rem; padding: 0.5rem 0; animation: scrollMarquee 32s linear infinite; will-change: transform; }
+    .client-marquee-container:hover .client-marquee-track { animation-play-state: paused; }
+    @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 0.75rem)); } }
+    .client-card { min-width: 280px; max-width: 320px; background: rgba(10, 16, 30, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .client-card:hover { transform: translateY(-3px); border-color: rgba(0, 255, 102, 0.45); box-shadow: 0 12px 30px -5px rgba(0, 255, 102, 0.18); }
   </style>
 </head>
 <body class="bg-astro-dark text-slate-100 antialiased selection:bg-astro-green selection:text-black relative overflow-x-hidden">
@@ -324,6 +330,218 @@
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2.5 SEÇÃO — MARCAS & NEGÓCIOS QUE CONFIAM (CARROSSEL INFINITO)            -->
+    <!-- ========================================================================= -->
+    <section class="py-10 sm:py-12 relative border-y border-slate-800/80 bg-[#050914]/95 overflow-hidden">
+      <!-- Ambient Glow Behind Carousel -->
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-astro-green/5 to-transparent pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/80 border border-slate-700/60 mb-2">
+          <span class="w-2 h-2 rounded-full bg-astro-green animate-pulse"></span>
+          <span class="text-[11px] font-mono-tech uppercase tracking-widest text-slate-300 font-bold">Autoridade & Credibilidade</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-400 font-medium">
+          Empresas e profissionais que aceleram com a presença digital da <span class="text-white font-bold">Astro Digital</span>
+        </p>
+      </div>
+
+      <!-- Marquee Carousel Wrapper with Fade Edges -->
+      <div class="relative w-full overflow-hidden client-marquee-container">
+        <!-- Fade Mask Left & Right -->
+        <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#050914] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#050914] to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Marquee Track (Double loop for smooth continuous animation) -->
+        <div class="client-marquee-track">
+          
+          <!-- ITEM 1: Natália Duarte Ateliê -->
+          <a href="https://www.instagram.com/nataliaduarteatelie/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/20 via-slate-900 to-slate-950 border border-pink-500/30 flex items-center justify-center text-pink-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              ND
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Natália Duarte</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-pink-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Ateliê & Confeitaria</span>
+              <span class="text-[10px] text-astro-green font-mono">@nataliaduarteatelie</span>
+            </div>
+          </a>
+
+          <!-- ITEM 2: Surf Livre -->
+          <a href="https://www.instagram.com/surflivre1/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 via-slate-900 to-slate-950 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              SL
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Surf Livre</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-cyan-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Surf Culture & Lifestyle</span>
+              <span class="text-[10px] text-astro-green font-mono">@surflivre1</span>
+            </div>
+          </a>
+
+          <!-- ITEM 3: Papa Tráfego -->
+          <a href="https://www.instagram.com/duartepapatrafego/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 via-slate-900 to-slate-950 border border-emerald-500/30 flex items-center justify-center text-astro-green font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 transition-all duration-300 shadow-md">
+              PT
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Papa Tráfego</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-astro-green text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Tráfego Pago & Escala</span>
+              <span class="text-[10px] text-astro-green font-mono">@duartepapatrafego</span>
+            </div>
+          </a>
+
+          <!-- ITEM 4: LT Audiovisual -->
+          <a href="https://www.instagram.com/lt.audiovisual/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 via-slate-900 to-slate-950 border border-amber-500/30 flex items-center justify-center text-amber-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              LT
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">LT Audiovisual</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-amber-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Produção & Filmmaking</span>
+              <span class="text-[10px] text-astro-green font-mono">@lt.audiovisual</span>
+            </div>
+          </a>
+
+          <!-- ITEM 5: Intense Wax -->
+          <a href="https://www.instagram.com/intensewax/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 via-slate-900 to-slate-950 border border-purple-500/30 flex items-center justify-center text-purple-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              IW
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Intense Wax</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-purple-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Estética & Cuidados</span>
+              <span class="text-[10px] text-astro-green font-mono">@intensewax</span>
+            </div>
+          </a>
+
+          <!-- ITEM 6: Valor Condo Company -->
+          <a href="https://www.instagram.com/valorcondocompany/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 via-slate-900 to-slate-950 border border-blue-500/30 flex items-center justify-center text-blue-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              VC
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Valor Condo Company</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-blue-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Gestão Condominial</span>
+              <span class="text-[10px] text-astro-green font-mono">@valorcondocompany</span>
+            </div>
+          </a>
+
+          <!-- REPEAT FOR SEAMLESS INFINITE LOOP -->
+          
+          <!-- ITEM 1 (Clone) -->
+          <a href="https://www.instagram.com/nataliaduarteatelie/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/20 via-slate-900 to-slate-950 border border-pink-500/30 flex items-center justify-center text-pink-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              ND
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Natália Duarte</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-pink-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Ateliê & Confeitaria</span>
+              <span class="text-[10px] text-astro-green font-mono">@nataliaduarteatelie</span>
+            </div>
+          </a>
+
+          <!-- ITEM 2 (Clone) -->
+          <a href="https://www.instagram.com/surflivre1/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 via-slate-900 to-slate-950 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              SL
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Surf Livre</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-cyan-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Surf Culture & Lifestyle</span>
+              <span class="text-[10px] text-astro-green font-mono">@surflivre1</span>
+            </div>
+          </a>
+
+          <!-- ITEM 3 (Clone) -->
+          <a href="https://www.instagram.com/duartepapatrafego/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 via-slate-900 to-slate-950 border border-emerald-500/30 flex items-center justify-center text-astro-green font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 transition-all duration-300 shadow-md">
+              PT
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Papa Tráfego</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-astro-green text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Tráfego Pago & Escala</span>
+              <span class="text-[10px] text-astro-green font-mono">@duartepapatrafego</span>
+            </div>
+          </a>
+
+          <!-- ITEM 4 (Clone) -->
+          <a href="https://www.instagram.com/lt.audiovisual/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 via-slate-900 to-slate-950 border border-amber-500/30 flex items-center justify-center text-amber-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              LT
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">LT Audiovisual</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-amber-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Produção & Filmmaking</span>
+              <span class="text-[10px] text-astro-green font-mono">@lt.audiovisual</span>
+            </div>
+          </a>
+
+          <!-- ITEM 5 (Clone) -->
+          <a href="https://www.instagram.com/intensewax/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 via-slate-900 to-slate-950 border border-purple-500/30 flex items-center justify-center text-purple-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              IW
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Intense Wax</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-purple-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Estética & Cuidados</span>
+              <span class="text-[10px] text-astro-green font-mono">@intensewax</span>
+            </div>
+          </a>
+
+          <!-- ITEM 6 (Clone) -->
+          <a href="https://www.instagram.com/valorcondocompany/" target="_blank" rel="noopener noreferrer" class="client-card flex items-center gap-4 px-5 py-3.5 rounded-2xl glass-panel border border-slate-800/90 hover:border-astro-green/50 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 via-slate-900 to-slate-950 border border-blue-500/30 flex items-center justify-center text-blue-400 font-heading font-black text-base group-hover:scale-110 group-hover:border-astro-green/60 group-hover:text-astro-green transition-all duration-300 shadow-md">
+              VC
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="text-sm font-bold text-white group-hover:text-astro-green transition-colors leading-tight">Valor Condo Company</h4>
+                <i class="fa-brands fa-instagram text-slate-500 group-hover:text-blue-400 text-xs transition-colors"></i>
+              </div>
+              <span class="text-[11px] text-slate-400 block font-medium">Gestão Condominial</span>
+              <span class="text-[10px] text-astro-green font-mono">@valorcondocompany</span>
+            </div>
+          </a>
+
+        </div>
       </div>
     </section>
 
