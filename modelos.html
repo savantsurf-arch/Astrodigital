@@ -4,20 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Meta Tags -->
   <title>Modelos Exclusivos de Sites & Landing Pages | Astro Digital</title>
-  <meta name="description" content="Explore nossa galeria de modelos de sites profissionais e landing pages de alta conversão para clínicas, advogados, mentorias, restaurantes, construtoras e imobiliárias.">
-  <meta name="keywords" content="modelos de sites, exemplos de landing pages, portfólio web design, sites prontos, astro digital">
+  <meta name="description" content="Conheça nossos modelos e projetos de alta conversão para diversos nichos. Inspire-se e solicite seu site sob medida com a Astro Digital.">
+  <meta name="keywords" content="modelos de landing page, exemplos de sites, portfólio web design, templates profissionais, astro digital">
   <meta name="author" content="Astro Digital">
   <meta name="robots" content="index, follow">
   
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
   
-  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -30,13 +29,12 @@
       theme: {
         extend: {
           colors: {
+            'astro-black': '#050505',
+            'astro-surface': '#0a0a0a',
+            'astro-card': '#111111',
+            'astro-card-hover': '#181818',
+            'astro-lime': '#a3ff3f',
             'astro-green': '#00ff66',
-            'astro-emerald': '#05df72',
-            'astro-teal': '#00e5ff',
-            'astro-dark': '#030509',
-            'astro-surface': '#070b14',
-            'astro-card': '#0a101e',
-            'astro-card-border': '#1e293b',
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -48,100 +46,78 @@
     }
   </script>
   
-  <!-- Custom Stylesheet (Link + Embedded para garantia total em produção) -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     :root {
-      --bg-deep: #030509;
-      --bg-surface: #070b14;
-      --bg-card: rgba(10, 16, 30, 0.7);
-      --bg-card-hover: rgba(15, 23, 42, 0.85);
+      --bg-deep: #050505;
+      --bg-surface: #0a0a0a;
+      --bg-card: #111111;
+      --bg-card-hover: #181818;
+      --astro-lime: #a3ff3f;
       --astro-green: #00ff66;
-      --astro-emerald: #05df72;
-      --astro-teal: #00e5ff;
-      --astro-glow: rgba(0, 255, 102, 0.4);
-      --border-subtle: rgba(255, 255, 255, 0.07);
-      --border-glow: rgba(0, 255, 102, 0.35);
-      --text-main: #f8fafc;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(163, 255, 63, 0.4);
+      --text-main: #ffffff;
       --text-muted: #94a3b8;
     }
-    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar { width: 7px; }
     ::-webkit-scrollbar-track { background: var(--bg-deep); }
-    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 999px; border: 2px solid var(--bg-deep); }
-    ::-webkit-scrollbar-thumb:hover { background: var(--astro-green); }
+    ::-webkit-scrollbar-thumb { background: #222; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--astro-lime); }
     html { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-deep); color: var(--text-main); overflow-x: hidden; }
-    h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; letter-spacing: -0.025em; }
     .font-mono-tech { font-family: 'Space Grotesk', monospace; }
-    .text-metallic { background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .text-glow-green { background: linear-gradient(135deg, #00ff66 0%, #05df72 50%, #22c55e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 25px rgba(0, 255, 102, 0.45)); }
-    .glass-panel { background: linear-gradient(135deg, rgba(13, 20, 36, 0.65) 0%, rgba(8, 12, 22, 0.75) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border-subtle); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
-    .glass-panel:hover { border-color: var(--border-glow); box-shadow: 0 20px 40px -15px rgba(0, 255, 102, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1); transform: translateY(-4px); }
-    .glass-nav { background: rgba(3, 5, 9, 0.75); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
-    .glow-btn { position: relative; background: linear-gradient(135deg, #00ff66 0%, #05df72 100%) !important; color: #030509 !important; font-weight: 800 !important; box-shadow: 0 0 30px rgba(0, 255, 102, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.6); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-    .glow-btn:hover { background: linear-gradient(135deg, #26ff7b 0%, #00e659 100%) !important; color: #030509 !important; box-shadow: 0 0 45px rgba(0, 255, 102, 0.7), 0 0 15px rgba(0, 255, 102, 0.5); transform: translateY(-2px) scale(1.02); }
-    .glow-btn:active { transform: translateY(0px) scale(0.98); }
-    .glow-badge { background: linear-gradient(90deg, rgba(0, 255, 102, 0.1) 0%, rgba(5, 223, 114, 0.05) 100%) !important; border: 1px solid rgba(0, 255, 102, 0.3) !important; color: #00ff66 !important; box-shadow: 0 0 15px rgba(0, 255, 102, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-    .aurora-mesh { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(90px); z-index: 0; animation: auroraDrift 12s ease-in-out infinite alternate; }
-    .aurora-1 { width: 650px; height: 650px; background: radial-gradient(circle, rgba(0, 255, 102, 0.15) 0%, rgba(0, 255, 102, 0) 70%); }
-    .aurora-2 { width: 550px; height: 550px; background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, rgba(0, 100, 255, 0) 70%); animation-duration: 16s; animation-delay: -4s; }
-    @keyframes auroraDrift { 0% { transform: translate(0px, 0px) scale(1); } 50% { transform: translate(40px, -30px) scale(1.1); } 100% { transform: translate(-30px, 20px) scale(0.95); } }
-    .bg-grid-cyber { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px); }
-    @keyframes floatSmooth { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
-    @keyframes floatSmoothDelayed { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
-    .animate-float { animation: floatSmooth 5s ease-in-out infinite; }
-    .animate-float-delayed { animation: floatSmoothDelayed 6s ease-in-out 2s infinite; }
-    .floating-stat-badge { background: rgba(8, 14, 26, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0, 255, 102, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 255, 102, 0.15); border-radius: 18px; }
+    .text-metallic { background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .text-glow-lime { color: #a3ff3f; text-shadow: 0 0 25px rgba(163, 255, 63, 0.45); }
+    .glass-panel { background: rgba(17, 17, 17, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border-subtle); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .glass-panel:hover { border-color: var(--border-glow); background: rgba(24, 24, 24, 0.85); box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.8), 0 0 30px -10px rgba(163, 255, 63, 0.15); transform: translateY(-3px); }
+    .glass-nav { background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+    .btn-lime { position: relative; background: #a3ff3f !important; color: #050505 !important; font-weight: 800 !important; border-radius: 9999px; box-shadow: 0 0 25px rgba(163, 255, 63, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    .btn-lime:hover { background: #b6ff66 !important; box-shadow: 0 0 40px rgba(163, 255, 63, 0.6), 0 0 15px rgba(163, 255, 63, 0.4); transform: translateY(-2px); }
+    .btn-outline { background: rgba(17, 17, 17, 0.6) !important; color: #ffffff !important; border: 1px solid rgba(255, 255, 255, 0.12) !important; border-radius: 9999px; backdrop-filter: blur(12px); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    .btn-outline:hover { border-color: rgba(163, 255, 63, 0.5) !important; color: #a3ff3f !important; background: rgba(24, 24, 24, 0.9) !important; box-shadow: 0 0 20px rgba(163, 255, 63, 0.15); transform: translateY(-2px); }
+    .ambient-glow { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(120px); z-index: 0; }
+    .glow-lime-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(163, 255, 63, 0.12) 0%, rgba(163, 255, 63, 0) 70%); }
+    .glow-lime-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 255, 102, 0.08) 0%, rgba(0, 255, 102, 0) 70%); }
+    .bg-grid-tech { background-size: 48px 48px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px); }
     .whatsapp-float-btn { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; align-items: center; gap: 12px; background: #25d366; color: #ffffff; padding: 14px 22px; border-radius: 9999px; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45); font-weight: 800; font-size: 15px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); animation: pulseGlowWhatsApp 2.4s infinite; }
     .whatsapp-float-btn:hover { transform: scale(1.08) translateY(-4px); box-shadow: 0 15px 35px rgba(37, 211, 102, 0.7); color: #ffffff; }
     @keyframes pulseGlowWhatsApp { 0%, 100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 8px 35px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0); } }
-    .reveal-init { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal-visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
-<body class="bg-astro-dark text-slate-100 antialiased selection:bg-astro-green selection:text-black relative overflow-x-hidden">
+<body class="bg-astro-black text-slate-100 antialiased selection:bg-astro-lime selection:text-black relative overflow-x-hidden">
 
-  <!-- Ambient Aurora Lights -->
-  <div class="aurora-mesh aurora-1 top-[-100px] left-1/2 -translate-x-1/2 opacity-70"></div>
-  <div class="aurora-mesh aurora-2 top-[800px] right-[-150px] opacity-60"></div>
-  <div class="aurora-mesh aurora-1 top-[2200px] left-[-200px] opacity-50"></div>
+  <!-- Ambient Glow Backlights -->
+  <div class="ambient-glow glow-lime-1 top-[-100px] left-1/2 -translate-x-1/2 opacity-70"></div>
+  <div class="ambient-glow glow-lime-2 top-[800px] right-[-100px] opacity-60"></div>
+  <div class="ambient-glow glow-lime-1 top-[2200px] left-[-150px] opacity-50"></div>
 
-  <!-- ========================================================================= -->
-  <!-- 1. HEADER / NAVBAR                                                        -->
-  <!-- ========================================================================= -->
+  <!-- Header -->
   <header id="main-navbar" class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Brand Logo -->
         <a href="index.html" class="flex items-center gap-3 group">
-          <div class="relative w-11 h-11 rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-astro-green via-slate-500 to-transparent group-hover:shadow-[0_0_20px_rgba(0,255,102,0.5)] transition-all duration-300">
+          <div class="relative w-11 h-11 rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-astro-lime via-slate-700 to-transparent group-hover:shadow-[0_0_20px_rgba(163,255,63,0.4)] transition-all duration-300">
             <img src="assets/images/logo.jpg" alt="Astro Digital Logo" class="w-full h-full object-cover rounded-[10px]">
           </div>
           <div>
             <span class="font-heading font-black text-xl tracking-wider text-white flex items-center gap-0.5">
-              ASTRO<span class="text-astro-green">DIGITAL</span>
+              ASTRO<span class="text-astro-lime">DIGITAL</span>
             </span>
-            <span class="block text-[9px] tracking-widest text-slate-400 uppercase font-semibold">Web Design & Conversão</span>
+            <span class="block text-[9px] tracking-widest text-slate-400 uppercase font-mono font-semibold">Catálogo de Modelos</span>
           </div>
         </a>
 
-        <!-- Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="index.html" class="hover:text-astro-green transition-colors flex items-center gap-1.5">
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="index.html" class="btn-outline text-xs uppercase tracking-wider px-5 py-2.5 flex items-center gap-2">
             <i class="fa-solid fa-arrow-left text-xs"></i>
             <span>Voltar ao Início</span>
           </a>
-          <a href="index.html#solucoes" class="hover:text-astro-green transition-colors">Serviços</a>
-          <a href="index.html#beneficios" class="hover:text-astro-green transition-colors">Benefícios</a>
-          <a href="index.html#planos" class="hover:text-astro-green transition-colors">Planos & Preços</a>
-          <a href="index.html#faq" class="hover:text-astro-green transition-colors">FAQ</a>
-        </nav>
-
-        <!-- CTA Header Button -->
-        <div class="flex items-center gap-4">
-          <a href="index.html#contato" data-wa-type="portfolio" class="glow-btn text-black font-extrabold text-sm px-6 py-3 rounded-full flex items-center gap-2 group">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
+          <a href="index.html#contato" data-wa-type="portfolio" class="btn-lime text-xs uppercase tracking-wider px-6 py-2.5 flex items-center gap-2">
             <span>Pedir Orçamento</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
         </div>
 
@@ -149,435 +125,248 @@
     </div>
   </header>
 
-  <!-- ========================================================================= -->
-  <!-- 2. HERO DA PÁGINA DE MODELOS                                              -->
-  <!-- ========================================================================= -->
-  <main class="relative z-10 pt-28 pb-24">
+  <!-- Main Content -->
+  <main class="relative z-10 pt-32 pb-24">
     
     <section class="py-12 lg:py-16 text-center max-w-4xl mx-auto px-4 sm:px-6">
       
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glow-badge text-xs font-bold tracking-wide uppercase mb-6">
-        <i class="fa-solid fa-layer-group"></i>
-        <span>Catálogo de Modelos Exclusivos</span>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#111] border border-white/10 text-astro-lime text-xs font-mono-tech uppercase mb-6">
+        <span>// Catálogo de Experiências</span>
       </div>
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-tight mb-6">
-        <span class="text-metallic block">Inspire-se em Nossos</span>
-        <span class="text-glow-green">Modelos de Alta Conversão</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-tight mb-6">
+        Projetos pensados para <span class="text-glow-lime">alta conversão.</span>
       </h1>
 
       <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-        Cada projeto é desenvolvido com design exclusivo, estrutura pensada para vender e integração direta com o seu WhatsApp. Escolha o estilo ideal para o seu nicho.
+        Cada projeto é desenvolvido com design exclusivo, carregamento rápido e foco em fechar negócios no seu WhatsApp. Escolha o estilo ideal para a sua empresa.
       </p>
 
       <!-- Category Filter Tabs -->
       <div class="flex flex-wrap items-center justify-center gap-2.5">
-        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-astro-green text-black transition-all shadow-glow-green" data-filter="all">Todos os Modelos</button>
-        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all border border-slate-800" data-filter="local">Negócios Locais</button>
-        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all border border-slate-800" data-filter="landing">Landing Pages de Vendas</button>
-        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all border border-slate-800" data-filter="institucional">Institucionais & Corporativos</button>
+        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs font-bold bg-astro-lime text-black transition-all" data-filter="all">Todos os Projetos</button>
+        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs bg-[#111] text-slate-300 hover:bg-[#181818] transition-all border border-white/10" data-filter="fitness">Academia & Esporte</button>
+        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs bg-[#111] text-slate-300 hover:bg-[#181818] transition-all border border-white/10" data-filter="solar">Energia & Indústria</button>
+        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs bg-[#111] text-slate-300 hover:bg-[#181818] transition-all border border-white/10" data-filter="gourmet">Gastronomia & Ateliê</button>
+        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs bg-[#111] text-slate-300 hover:bg-[#181818] transition-all border border-white/10" data-filter="imovel">Imobiliária & Construtora</button>
+        <button class="portfolio-filter-btn px-6 py-2.5 rounded-full text-xs bg-[#111] text-slate-300 hover:bg-[#181818] transition-all border border-white/10" data-filter="saude">Saúde & Advocacia</button>
       </div>
 
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- 3. GRID COMPLETO DE PROJETOS & MODELOS                                    -->
-    <!-- ========================================================================= -->
+    <!-- Grid of Projects -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Project 1: Clínica Médica / Odontologia -->
-        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-astro-green/40 transition-all duration-300 shadow-xl" data-category="local">
-          <div class="relative overflow-hidden bg-slate-950 h-64">
-            <img src="assets/images/mockup_odonto.jpg" alt="Mockup Site Clínica Odonto Prime" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
-            <div class="absolute top-3 left-3">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-astro-green border border-astro-green/30 backdrop-blur-md">
-                ★ 4.9 Google Reviews
-              </span>
-            </div>
-            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-              <button onclick="openMockupModal('assets/images/mockup_odonto.jpg', 'Clínica Odonto Prime', 'Negócio Local / Saúde', 'Landing Page moderna desenvolvida para captação de pacientes particulares, com agendamento direto pelo WhatsApp e integração com Google Maps.', 'Olá! Gostei muito do modelo de site para Clínica/Saúde e gostaria de um orçamento parecido!')" class="px-4 py-2 rounded-full bg-slate-900 text-white font-bold text-xs border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
-                <i class="fa-solid fa-expand"></i> Ver Modelo
-              </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de site para Clínica/Consultório (Odonto Prime) e quero um projeto neste estilo!" class="px-4 py-2 rounded-full bg-astro-green text-black font-extrabold text-xs shadow-glow-green hover:scale-105 transition-transform flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp"></i> Quero Igual
-              </a>
-            </div>
+        <!-- Project 1: IronFit Club (Academia) -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-astro-lime/50 transition-all duration-300" data-category="fitness">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#0c0c0c]">
+            <img src="assets/images/mockup_academia.jpg" alt="Mockup Academia IronFit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-astro-lime text-[11px] font-mono-tech font-bold uppercase">Academia & Fitness</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-astro-green uppercase tracking-wider">Negócio Local / Saúde</span>
-              <span class="text-xs text-slate-400">Landing Page + Maps</span>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-2">Clínica Odonto Prime</h3>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Estrutura pensada para atrair pacientes particulares através de anúncios locais no Google com agendamento direto no WhatsApp.
+            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-astro-lime transition-colors">IronFit Club</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Plataforma com tabela interativa de horários, apresentação de treinadores e conversão direta de matrículas.
             </p>
-            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-              <button onclick="openMockupModal('assets/images/mockup_odonto.jpg', 'Clínica Odonto Prime', 'Negócio Local / Saúde', 'Landing Page moderna desenvolvida para captação de pacientes particulares, com agendamento direto pelo WhatsApp e integração com Google Maps.', 'Olá! Gostei muito do modelo de site para Clínica/Saúde e gostaria de um orçamento parecido!')" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
-                <i class="fa-regular fa-eye text-astro-green"></i>
-                <span>Ver demonstração</span>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button onclick="openMockupModal('assets/images/mockup_academia.jpg', 'IronFit Club', 'Academia & Fitness', 'Website institucional e página de vendas de alta performance com integração de planos e agendamentos.', 'Olá! Gostei do modelo de site para Academia (IronFit) e quero um projeto parecido!')" class="text-xs font-bold text-slate-300 hover:text-astro-lime flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-lime"></i>
+                <span>Ver Demonstração</span>
               </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de site para Clínica Odonto Prime e gostaria de um orçamento!" class="text-xs font-bold text-astro-green hover:underline flex items-center gap-1">
-                <span>Pedir orçamento</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Vi o modelo da IronFit (Academia) e quero um site parecido para meu negócio!" class="w-8 h-8 rounded-full bg-astro-lime text-black flex items-center justify-center text-xs font-black hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 2: Advocacia & Assessoria Jurídica -->
-        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-astro-green/40 transition-all duration-300 shadow-xl" data-category="institucional">
-          <div class="relative overflow-hidden bg-slate-950 h-64">
-            <img src="assets/images/mockup_advocacia.jpg" alt="Mockup Site Silva e Associados Advocacia" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
-            <div class="absolute top-3 left-3">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-amber-400 border border-amber-400/30 backdrop-blur-md">
-                ★ OAB Credenciada
-              </span>
-            </div>
-            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-              <button onclick="openMockupModal('assets/images/mockup_advocacia.jpg', 'Silva & Associados Advocacia', 'Institucional / Escritório', 'Site institucional corporativo para escritórios jurídicos, com apresentação de sócios, áreas de atuação e formulário seguro de consulta.', 'Olá! Gostei muito do modelo de site para Escritório de Advocacia e gostaria de um orçamento!')" class="px-4 py-2 rounded-full bg-slate-900 text-white font-bold text-xs border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
-                <i class="fa-solid fa-expand"></i> Ver Modelo
-              </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de site para Escritório de Advocacia (Silva & Associados) e quero um projeto similar!" class="px-4 py-2 rounded-full bg-astro-green text-black font-extrabold text-xs shadow-glow-green hover:scale-105 transition-transform flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp"></i> Quero Igual
-              </a>
-            </div>
+        <!-- Project 2: Lumina Solar Tech (Energia Solar) -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-astro-lime/50 transition-all duration-300" data-category="solar">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#0c0c0c]">
+            <img src="assets/images/mockup_solar.jpg" alt="Mockup Lumina Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-astro-lime text-[11px] font-mono-tech font-bold uppercase">Energia Solar</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-astro-green uppercase tracking-wider">Institucional / Escritório</span>
-              <span class="text-xs text-slate-400">Multi-seções</span>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-2">Silva & Associados Advocacia</h3>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Design refinado com tom sério e elegante, focado em transmitir autoridade para clientes corporativos e empresas.
+            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-astro-lime transition-colors">Lumina Solar Tech</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Site corporativo para engenharia fotovoltaica com simulador de economia e captação de orçamentos no WhatsApp.
             </p>
-            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-              <button onclick="openMockupModal('assets/images/mockup_advocacia.jpg', 'Silva & Associados Advocacia', 'Institucional / Escritório', 'Site institucional corporativo para escritórios jurídicos, com apresentação de sócios, áreas de atuação e formulário seguro de consulta.', 'Olá! Gostei muito do modelo de site para Escritório de Advocacia e gostaria de um orçamento!')" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
-                <i class="fa-regular fa-eye text-astro-green"></i>
-                <span>Ver demonstração</span>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button onclick="openMockupModal('assets/images/mockup_solar.jpg', 'Lumina Solar Tech', 'Energia Solar & Engenharia', 'Plataforma institucional moderna com calculadora de economia fotovoltaica e captura de leads qualificados.', 'Olá! Gostei do modelo de site para Energia Solar (Lumina) e quero um projeto parecido!')" class="text-xs font-bold text-slate-300 hover:text-astro-lime flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-lime"></i>
+                <span>Ver Demonstração</span>
               </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de Advocacia e gostaria de solicitar um orçamento!" class="text-xs font-bold text-astro-green hover:underline flex items-center gap-1">
-                <span>Pedir orçamento</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Vi o modelo da Lumina Solar e quero um site parecido para minha empresa de energia/engenharia!" class="w-8 h-8 rounded-full bg-astro-lime text-black flex items-center justify-center text-xs font-black hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 3: Consultoria & Mentoria de Negócios -->
-        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-astro-green/40 transition-all duration-300 shadow-xl" data-category="landing">
-          <div class="relative overflow-hidden bg-slate-950 h-64">
-            <img src="assets/images/mockup_mentoria.jpg" alt="Mockup Landing Page Mentoria Digital" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
-            <div class="absolute top-3 left-3">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-astro-green border border-astro-green/30 backdrop-blur-md">
-                ★ Alta Conversão
-              </span>
-            </div>
-            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-              <button onclick="openMockupModal('assets/images/mockup_mentoria.jpg', 'Mentoria Escala Pro', 'Landing Page / Vendas', 'Landing Page de vendas agressiva para mentorias, infoprodutos e especialistas, com gráficos de receita, vídeo de vendas e gatilhos de escassez.', 'Olá! Gostei muito da Landing Page de Mentoria/Vendas e quero uma estrutura parecida!')" class="px-4 py-2 rounded-full bg-slate-900 text-white font-bold text-xs border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
-                <i class="fa-solid fa-expand"></i> Ver Modelo
-              </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de Landing Page de Mentoria/Vendas e quero uma estrutura parecida!" class="px-4 py-2 rounded-full bg-astro-green text-black font-extrabold text-xs shadow-glow-green hover:scale-105 transition-transform flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp"></i> Quero Igual
-              </a>
-            </div>
+        <!-- Project 3: Duarte Patisserie (Confeitaria & Gourmet) -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-astro-lime/50 transition-all duration-300" data-category="gourmet">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#0c0c0c]">
+            <img src="assets/images/mockup_confeitaria.jpg" alt="Mockup Duarte Patisserie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-astro-lime text-[11px] font-mono-tech font-bold uppercase">Confeitaria & Cursos</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-astro-green uppercase tracking-wider">Landing Page / Vendas</span>
-              <span class="text-xs text-slate-400">Página de Vendas</span>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-2">Mentoria Escala Pro</h3>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Página de captura e vendas direta com gatilhos mentais, gráficos de resultados e integração com checkout de pagamentos.
+            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-astro-lime transition-colors">Duarte Patisserie</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Catálogo visual de bolos, doces finos e cursos profissionalizantes com botão de pedido direto no WhatsApp.
             </p>
-            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-              <button onclick="openMockupModal('assets/images/mockup_mentoria.jpg', 'Mentoria Escala Pro', 'Landing Page / Vendas', 'Landing Page de vendas agressiva para mentorias, infoprodutos e especialistas, com gráficos de receita, vídeo de vendas e gatilhos de escassez.', 'Olá! Gostei muito da Landing Page de Mentoria/Vendas e quero uma estrutura parecida!')" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
-                <i class="fa-regular fa-eye text-astro-green"></i>
-                <span>Ver demonstração</span>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button onclick="openMockupModal('assets/images/mockup_confeitaria.jpg', 'Duarte Patisserie', 'Confeitaria & Cursos', 'Catálogo digital luxuoso de doces finos com cardápio interativo e vendas diretas no WhatsApp.', 'Olá! Gostei do modelo de site para Confeitaria/Doceria e quero um projeto parecido!')" class="text-xs font-bold text-slate-300 hover:text-astro-lime flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-lime"></i>
+                <span>Ver Demonstração</span>
               </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de Mentoria Escala Pro e quero solicitar orçamento!" class="text-xs font-bold text-astro-green hover:underline flex items-center gap-1">
-                <span>Pedir orçamento</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Vi o modelo de Confeitaria/Ateliê e quero um site para o meu negócio!" class="w-8 h-8 rounded-full bg-astro-lime text-black flex items-center justify-center text-xs font-black hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 4: Restaurante & Hamburgueria Artesanal -->
-        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-astro-green/40 transition-all duration-300 shadow-xl" data-category="local">
-          <div class="relative overflow-hidden bg-slate-950 h-64">
-            <img src="assets/images/mockup_restaurante.jpg" alt="Mockup Site Restaurante e Hamburgueria" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
-            <div class="absolute top-3 left-3">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-amber-400 border border-amber-400/30 backdrop-blur-md">
-                ★ Cardápio Digital
-              </span>
-            </div>
-            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-              <button onclick="openMockupModal('assets/images/mockup_restaurante.jpg', 'Burger Craft House', 'Gastronomia / Negócio Local', 'Site e cardápio digital interativo para hamburguerias, pizzarias e restaurantes, com botão direto de pedidos no WhatsApp sem taxas de apps terceiros.', 'Olá! Gostei muito do modelo de site para Restaurante/Hamburgueria e quero um orçamento!')" class="px-4 py-2 rounded-full bg-slate-900 text-white font-bold text-xs border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
-                <i class="fa-solid fa-expand"></i> Ver Modelo
-              </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de cardápio digital para Hamburgueria/Restaurante e quero um orçamento!" class="px-4 py-2 rounded-full bg-astro-green text-black font-extrabold text-xs shadow-glow-green hover:scale-105 transition-transform flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp"></i> Quero Igual
-              </a>
-            </div>
+        <!-- Project 4: Residencial Grand Ville (Imobiliária) -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-astro-lime/50 transition-all duration-300" data-category="imovel">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#0c0c0c]">
+            <img src="assets/images/mockup_imobiliaria.jpg" alt="Mockup Residencial Grand Ville" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-astro-lime text-[11px] font-mono-tech font-bold uppercase">Imóveis de Luxo</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-astro-green uppercase tracking-wider">Gastronomia / Negócio Local</span>
-              <span class="text-xs text-slate-400">Cardápio + Delivery</span>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-2">Burger Craft House</h3>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Apresentação visualmente suculenta do cardápio, fotos dos pratos e integração direta com pedidos no WhatsApp.
+            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-astro-lime transition-colors">Residencial Grand Ville</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Página de vendas focada em lançamentos de alto padrão com galeria fotográfica, plantas e agendamento de corretores.
             </p>
-            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-              <button onclick="openMockupModal('assets/images/mockup_restaurante.jpg', 'Burger Craft House', 'Gastronomia / Negócio Local', 'Site e cardápio digital interativo para hamburguerias, pizzarias e restaurantes, com botão direto de pedidos no WhatsApp sem taxas de apps terceiros.', 'Olá! Gostei muito do modelo de site para Restaurante/Hamburgueria e quero um orçamento!')" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
-                <i class="fa-regular fa-eye text-astro-green"></i>
-                <span>Ver demonstração</span>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button onclick="openMockupModal('assets/images/mockup_imobiliaria.jpg', 'Residencial Grand Ville', 'Imobiliária & Construtora', 'Landing page de alto padrão para lançamentos residenciais com tour virtual e formulário direto de vendas.', 'Olá! Gostei do modelo de site para Imobiliária/Construtora e quero um projeto parecido!')" class="text-xs font-bold text-slate-300 hover:text-astro-lime flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-lime"></i>
+                <span>Ver Demonstração</span>
               </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de Restaurante e quero um orçamento!" class="text-xs font-bold text-astro-green hover:underline flex items-center gap-1">
-                <span>Pedir orçamento</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Vi o modelo da Grand Ville (Imobiliária) e quero um site neste padrão!" class="w-8 h-8 rounded-full bg-astro-lime text-black flex items-center justify-center text-xs font-black hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 5: Engenharia & Construção Civil -->
-        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-astro-green/40 transition-all duration-300 shadow-xl" data-category="institucional">
-          <div class="relative overflow-hidden bg-slate-950 h-64">
-            <img src="assets/images/mockup_construtora.jpg" alt="Mockup Site Construtora e Engenharia" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
-            <div class="absolute top-3 left-3">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-blue-400 border border-blue-400/30 backdrop-blur-md">
-                ★ +50 Obras Entregues
-              </span>
-            </div>
-            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-              <button onclick="openMockupModal('assets/images/mockup_construtora.jpg', 'Apex Construtora & Engenharia', 'Empresarial / Construção', 'Portal institucional de alto padrão para construtoras e engenheiros, destacando portfólio de obras, credenciais e solicitação de plantas.', 'Olá! Gostei muito do modelo de site para Construtora/Engenharia e gostaria de um orçamento!')" class="px-4 py-2 rounded-full bg-slate-900 text-white font-bold text-xs border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
-                <i class="fa-solid fa-expand"></i> Ver Modelo
-              </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de site para Construtora e Engenharia e quero um orçamento!" class="px-4 py-2 rounded-full bg-astro-green text-black font-extrabold text-xs shadow-glow-green hover:scale-105 transition-transform flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp"></i> Quero Igual
-              </a>
-            </div>
+        <!-- Project 5: Clínica Odonto Prime (Saúde) -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-astro-lime/50 transition-all duration-300" data-category="saude">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#0c0c0c]">
+            <img src="assets/images/mockup_odonto.jpg" alt="Mockup Odonto Prime" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-astro-lime text-[11px] font-mono-tech font-bold uppercase">Saúde & Estética</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-astro-green uppercase tracking-wider">Empresarial / Construção</span>
-              <span class="text-xs text-slate-400">Catálogo de Projetos</span>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-2">Apex Construtora</h3>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Catálogo interativo com galeria de obras entregues, laudos técnicos e botão direto para solicitação de plantas e orçamentos.
+            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-astro-lime transition-colors">Clínica Odonto Prime</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Estrutura pensada para atrair pacientes particulares através de anúncios locais no Google com agendamento no WhatsApp.
             </p>
-            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-              <button onclick="openMockupModal('assets/images/mockup_construtora.jpg', 'Apex Construtora & Engenharia', 'Empresarial / Construção', 'Portal institucional de alto padrão para construtoras e engenheiros, destacando portfólio de obras, credenciais e solicitação de plantas.', 'Olá! Gostei muito do modelo de site para Construtora/Engenharia e gostaria de um orçamento!')" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
-                <i class="fa-regular fa-eye text-astro-green"></i>
-                <span>Ver demonstração</span>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button onclick="openMockupModal('assets/images/mockup_odonto.jpg', 'Clínica Odonto Prime', 'Saúde & Odontologia', 'Landing Page moderna desenvolvida para captação de pacientes particulares, com agendamento direto pelo WhatsApp.', 'Olá! Gostei do modelo de site para Clínica/Saúde e quero um orçamento!')" class="text-xs font-bold text-slate-300 hover:text-astro-lime flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-lime"></i>
+                <span>Ver Demonstração</span>
               </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo da Apex Construtora e quero solicitar orçamento!" class="text-xs font-bold text-astro-green hover:underline flex items-center gap-1">
-                <span>Pedir orçamento</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Vi o modelo da Clínica Odonto Prime e quero um site para minha clínica/consultório!" class="w-8 h-8 rounded-full bg-astro-lime text-black flex items-center justify-center text-xs font-black hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Project 6: Imobiliária & Lançamentos -->
-        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between group hover:border-astro-green/40 transition-all duration-300 shadow-xl" data-category="landing">
-          <div class="relative overflow-hidden bg-slate-950 h-64">
-            <img src="assets/images/mockup_imobiliaria.jpg" alt="Mockup Landing Page Imobiliária" class="w-full h-full object-cover portfolio-card-img group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
-            <div class="absolute top-3 left-3">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-slate-900/90 text-astro-green border border-astro-green/30 backdrop-blur-md">
-                ★ Lançamento Nobre
-              </span>
-            </div>
-            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-sm">
-              <button onclick="openMockupModal('assets/images/mockup_imobiliaria.jpg', 'Residencial Grand Ville', 'Imobiliário / Lançamentos', 'Landing Page imobiliária para corretores e imobiliárias com tour virtual, tour em vídeo, plantas de apartamentos e botão de download do book.', 'Olá! Gostei muito do modelo de site para Imobiliária/Lançamentos e quero um orçamento!')" class="px-4 py-2 rounded-full bg-slate-900 text-white font-bold text-xs border border-slate-700 hover:bg-slate-800 transition-all flex items-center gap-1.5">
-                <i class="fa-solid fa-expand"></i> Ver Modelo
-              </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo de Landing Page Imobiliária (Residencial Grand Ville) e quero um orçamento!" class="px-4 py-2 rounded-full bg-astro-green text-black font-extrabold text-xs shadow-glow-green hover:scale-105 transition-transform flex items-center gap-1.5">
-                <i class="fa-brands fa-whatsapp"></i> Quero Igual
-              </a>
-            </div>
+        <!-- Project 6: Silva & Associados (Advocacia) -->
+        <div class="portfolio-card glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-astro-lime/50 transition-all duration-300" data-category="saude">
+          <div class="relative overflow-hidden aspect-[16/10] bg-[#0c0c0c]">
+            <img src="assets/images/mockup_advocacia.jpg" alt="Mockup Advocacia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-astro-lime text-[11px] font-mono-tech font-bold uppercase">Direito & Consultoria</span>
           </div>
           <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-astro-green uppercase tracking-wider">Imobiliário / Lançamentos</span>
-              <span class="text-xs text-slate-400">Captação de Leads</span>
-            </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-2">Residencial Grand Ville</h3>
-            <p class="text-slate-300 text-xs leading-relaxed mb-4">
-              Landing page imobiliária com tour virtual, calculadora de financiamento e agendamento de visita direto com o corretor.
+            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-astro-lime transition-colors">Silva & Associados</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Site corporativo para escritórios de advocacia transmitindo máxima seriedade, áreas de atuação e botão de consulta.
             </p>
-            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
-              <button onclick="openMockupModal('assets/images/mockup_imobiliaria.jpg', 'Residencial Grand Ville', 'Imobiliário / Lançamentos', 'Landing Page imobiliária para corretores e imobiliárias com tour virtual, tour em vídeo, plantas de apartamentos e botão de download do book.', 'Olá! Gostei muito do modelo de site para Imobiliária/Lançamentos e quero um orçamento!')" class="text-xs font-bold text-slate-300 hover:text-astro-green flex items-center gap-1.5 transition-colors">
-                <i class="fa-regular fa-eye text-astro-green"></i>
-                <span>Ver demonstração</span>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <button onclick="openMockupModal('assets/images/mockup_advocacia.jpg', 'Silva & Associados', 'Advocacia & Direito', 'Website corporativo sob medida para escritórios de advocacia, transmitindo alta credibilidade e triagem de clientes.', 'Olá! Gostei do modelo de site para Escritório de Advocacia e quero um orçamento!')" class="text-xs font-bold text-slate-300 hover:text-astro-lime flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-eye text-astro-lime"></i>
+                <span>Ver Demonstração</span>
               </button>
-              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Gostei do modelo da Imobiliária Grand Ville e quero um orçamento!" class="text-xs font-bold text-astro-green hover:underline flex items-center gap-1">
-                <span>Pedir orçamento</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="#" data-wa-type="portfolio" data-wa-msg="Olá! Vi o modelo de Advocacia/Consultoria e quero um site para meu escritório!" class="w-8 h-8 rounded-full bg-astro-lime text-black flex items-center justify-center text-xs font-black hover:scale-110 transition-transform">
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <!-- Custom Project Banner -->
-      <div class="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#0b162c] to-slate-900 border border-astro-green/40 text-center max-w-4xl mx-auto shadow-2xl">
-        <h3 class="text-2xl sm:text-3xl font-black font-heading text-white mb-3">
-          Não encontrou o seu nicho exato?
-        </h3>
-        <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-6">
-          Criamos designs 100% personalizados para qualquer segmento de mercado. Explique seu negócio e nós montamos uma proposta exclusiva.
-        </p>
-        <a href="#" data-wa-type="custom" data-wa-msg="Olá! Gostaria de um modelo de site personalizado para o meu nicho de atuação." class="inline-flex items-center gap-3 glow-btn text-black font-black px-9 py-4 rounded-full text-sm shadow-glow-green">
-          <i class="fa-brands fa-whatsapp text-xl"></i>
-          <span>Solicitar Modelo Personalizado no WhatsApp</span>
-        </a>
       </div>
 
     </section>
 
+    <!-- Bottom CTA -->
+    <section class="max-w-4xl mx-auto px-4 mt-20 text-center">
+      <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-astro-lime/30 space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-black font-heading text-white">
+          Gostou dos modelos ou precisa de algo exclusivo?
+        </h2>
+        <p class="text-sm text-slate-300 max-w-xl mx-auto">
+          Podemos adaptar qualquer modelo para a sua identidade visual ou criar um projeto 100% sob medida.
+        </p>
+        <a href="index.html#contato" data-wa-type="custom" class="btn-lime text-xs uppercase tracking-wider px-8 py-4 inline-flex items-center gap-2">
+          <span>Falar com o Especialista</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ========================================================================= -->
-  <!-- 4. RODAPÉ                                                                 -->
-  <!-- ========================================================================= -->
-  <footer class="border-t border-slate-800/80 bg-[#020408] py-14 relative z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800/60">
-        
-        <!-- Brand & Bio -->
-        <div class="space-y-4">
-          <a href="index.html" class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl overflow-hidden p-[1px] bg-gradient-to-br from-astro-green to-slate-700">
-              <img src="assets/images/logo.jpg" alt="Astro Digital" class="w-full h-full object-cover rounded-[10px]">
-            </div>
-            <span class="font-heading font-black text-xl tracking-wider text-white">
-              ASTRO<span class="text-astro-green">DIGITAL</span>
-            </span>
-          </a>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Especialistas em desenvolvimento de sites profissionais, landing pages de alta conversão e presença digital para empresas e profissionais autônomos.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider mb-4">Navegação</h4>
-          <ul class="space-y-2.5 text-xs text-slate-400">
-            <li><a href="index.html" class="hover:text-astro-green transition-colors">Página Inicial</a></li>
-            <li><a href="index.html#solucoes" class="hover:text-astro-green transition-colors">Nossos Serviços</a></li>
-            <li><a href="modelos.html" class="hover:text-astro-green transition-colors text-astro-green font-semibold">Modelos Exclusivos</a></li>
-            <li><a href="index.html#planos" class="hover:text-astro-green transition-colors">Planos & Preços</a></li>
-            <li><a href="index.html#faq" class="hover:text-astro-green transition-colors">Perguntas Frequentes</a></li>
-          </ul>
-        </div>
-
-        <!-- Solutions -->
-        <div>
-          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider mb-4">Modelos</h4>
-          <ul class="space-y-2.5 text-xs text-slate-400">
-            <li><a href="modelos.html" class="hover:text-astro-green transition-colors">Clínicas & Médicos</a></li>
-            <li><a href="modelos.html" class="hover:text-astro-green transition-colors">Escritórios de Advocacia</a></li>
-            <li><a href="modelos.html" class="hover:text-astro-green transition-colors">Mentorias & Vendas</a></li>
-            <li><a href="modelos.html" class="hover:text-astro-green transition-colors">Restaurantes & Delivery</a></li>
-            <li><a href="modelos.html" class="hover:text-astro-green transition-colors">Construtoras & Imobiliárias</a></li>
-          </ul>
-        </div>
-
-        <!-- Direct Contacts -->
-        <div>
-          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider mb-4">Canais de Atendimento</h4>
-          <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5">
-              <i class="fa-brands fa-whatsapp text-astro-green text-base"></i>
-              <a href="#" data-wa-type="hero" class="hover:text-astro-green transition-colors font-medium">WhatsApp: (73) 98233-5157</a>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <i class="fa-brands fa-instagram text-astro-green text-base"></i>
-              <a href="https://www.instagram.com/astro_digital01?igsi=amZ6czNiZTN1ZmIy&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-astro-green transition-colors font-medium">Instagram: @astro_digital01</a>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <i class="fa-regular fa-envelope text-astro-green text-base"></i>
-              <a href="mailto:contato@astrodigital.com.br" class="hover:text-astro-green transition-colors">contato@astrodigital.com.br</a>
-            </li>
-          </ul>
-        </div>
-
+  <!-- Footer -->
+  <footer class="py-12 bg-[#050505] border-t border-white/5 relative z-10 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo.jpg" alt="Astro Digital" class="w-7 h-7 rounded-lg object-cover">
+        <span class="font-heading font-black text-white">ASTRO<span class="text-astro-lime">DIGITAL</span></span>
       </div>
-
-      <!-- Copyright -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>© <span id="current-year">2026</span> Astro Digital. Todos os direitos reservados.</p>
-        <p class="flex items-center gap-1.5">
-          <span>Desenvolvido com tecnologia de alta performance</span>
-          <i class="fa-solid fa-code text-astro-green"></i>
-        </p>
-      </div>
-
+      <p>© 2026 Astro Digital. Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a id="whatsapp-float-btn" href="#" class="whatsapp-float-btn shadow-2xl group" aria-label="Falar no WhatsApp">
-    <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
-    <span class="hidden sm:inline-block">Orçamento no WhatsApp</span>
-  </a>
-
-  <!-- Lightbox Modal -->
-  <div id="mockup-modal" class="fixed inset-0 z-[1000] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md transition-opacity duration-300">
-    <div class="relative w-full max-w-4xl glass-panel bg-[#090e1a]/95 rounded-3xl border border-astro-green/40 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-      
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between p-5 sm:px-8 border-b border-slate-800 bg-[#0c1322]">
+  <!-- Modal Lightbox -->
+  <div id="mockup-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 transition-opacity">
+    <div class="relative w-full max-w-4xl max-h-[90vh] bg-[#0c0c0c] border border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col">
+      <div class="p-5 sm:px-8 border-b border-white/10 flex items-center justify-between">
         <div>
-          <span id="modal-category" class="text-xs font-bold text-astro-green uppercase tracking-wider block">Categoria</span>
+          <span id="modal-category" class="text-[11px] text-astro-lime font-mono-tech uppercase font-bold tracking-wider">Categoria</span>
           <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heading text-white">Nome do Projeto</h3>
         </div>
-        <button onclick="closeMockupModal()" class="w-10 h-10 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition-colors">
+        <button onclick="closeMockupModal()" class="w-10 h-10 rounded-full bg-[#181818] text-slate-300 hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
-
-      <!-- Modal Body -->
       <div class="p-5 sm:p-8 overflow-y-auto space-y-6">
-        <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-black">
+        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
           <img id="modal-img" src="" alt="Preview do Projeto" class="w-full h-auto object-cover">
         </div>
         <p id="modal-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed"></p>
       </div>
-
-      <!-- Modal Footer CTA -->
-      <div class="p-5 sm:px-8 border-t border-slate-800 bg-[#0c1322] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="p-5 sm:px-8 border-t border-white/10 bg-[#080808] flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="text-xs text-slate-400 flex items-center gap-2">
-          <i class="fa-solid fa-circle-check text-astro-green"></i>
+          <i class="fa-solid fa-circle-check text-astro-lime"></i>
           <span>Modelo 100% personalizável para a sua marca</span>
         </div>
-        <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto glow-btn text-black font-extrabold text-sm px-8 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-glow-green">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
+        <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto btn-lime text-xs uppercase tracking-wider px-8 py-3.5 flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i>
           <span>Quero um Projeto Neste Estilo</span>
         </a>
       </div>
-
     </div>
   </div>
 
-  <!-- Custom Scripts (Inline + External fallback) -->
+  <a id="whatsapp-float-btn" href="#" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Falar no WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="hidden sm:inline">Falar no WhatsApp</span>
+  </a>
+
+  <!-- Custom Scripts -->
   <script src="assets/js/main.js"></script>
   <script>
     const WHATSAPP_CONFIG = {
@@ -586,7 +375,7 @@
       planMessages: {
         landing: "Olá! Tenho interesse no plano LANDING PAGE para o meu negócio. Como podemos começar?",
         site: "Olá! Tenho interesse no plano SITE PROFISSIONAL (Mais Escolhido). Gostaria de ver como podemos aplicar no meu negócio!",
-        custom: "Olá! Preciso de um PROJETO PERSONALIZADO com funcionalidades específicas para minha empresa. Podemos conversar?",
+        custom: "Olá! Preciso de um PROJETO SOB MEDIDA com funcionalidades específicas para minha empresa. Podemos conversar?",
         hero: "Olá! Vi seu site da Astro Digital e quero criar um site profissional para aumentar as vendas do meu negócio.",
         portfolio: "Olá! Gostei muito dos projetos no portfólio da Astro Digital e gostaria de um orçamento para um site parecido."
       }
@@ -597,11 +386,7 @@
     }
     document.addEventListener("DOMContentLoaded", () => {
       initWhatsAppLinks();
-      initFaqAccordion();
       initPortfolioFilter();
-      initMobileMenu();
-      initScrollAnimations();
-      initNavbarScroll();
       initCurrentYear();
     });
     function initWhatsAppLinks() {
@@ -625,28 +410,17 @@
         floatBtn.setAttribute("rel", "noopener noreferrer");
       }
     }
-    function initFaqAccordion() {
-      const faqHeaders = document.querySelectorAll(".faq-header");
-      faqHeaders.forEach((header) => {
-        header.addEventListener("click", () => {
-          const currentItem = header.parentElement;
-          const isActive = currentItem.classList.contains("active");
-          document.querySelectorAll(".faq-item").forEach((item) => item.classList.remove("active"));
-          if (!isActive) currentItem.classList.add("active");
-        });
-      });
-    }
     function initPortfolioFilter() {
       const filterBtns = document.querySelectorAll(".portfolio-filter-btn");
       const portfolioItems = document.querySelectorAll(".portfolio-card");
       filterBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           filterBtns.forEach((b) => {
-            b.classList.remove("bg-astro-green", "text-black", "font-bold", "shadow-glow");
-            b.classList.add("bg-slate-900", "text-slate-300", "hover:bg-slate-800");
+            b.classList.remove("bg-astro-lime", "text-black", "font-bold");
+            b.classList.add("bg-[#111]", "text-slate-300");
           });
-          btn.classList.remove("bg-slate-900", "text-slate-300", "hover:bg-slate-800");
-          btn.classList.add("bg-astro-green", "text-black", "font-bold", "shadow-glow");
+          btn.classList.remove("bg-[#111]", "text-slate-300");
+          btn.classList.add("bg-astro-lime", "text-black", "font-bold");
           const filterValue = btn.getAttribute("data-filter");
           portfolioItems.forEach((item) => {
             const itemCategory = item.getAttribute("data-category");
@@ -660,54 +434,6 @@
             }
           });
         });
-      });
-    }
-    function initMobileMenu() {
-      const menuBtn = document.getElementById("mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileLinks = document.querySelectorAll(".mobile-nav-link");
-      if (!menuBtn || !mobileMenu) return;
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        const isOpen = !mobileMenu.classList.contains("hidden");
-        menuBtn.innerHTML = isOpen 
-          ? '<i class="fa-solid fa-xmark text-2xl text-astro-green"></i>' 
-          : '<i class="fa-solid fa-bars text-2xl text-white"></i>';
-      });
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-          menuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl text-white"></i>';
-        });
-      });
-    }
-    function initScrollAnimations() {
-      const revealElements = document.querySelectorAll(".reveal-init");
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver((entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("reveal-visible");
-              obs.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-        revealElements.forEach((el) => observer.observe(el));
-      } else {
-        revealElements.forEach((el) => el.classList.add("reveal-visible"));
-      }
-    }
-    function initNavbarScroll() {
-      const navbar = document.getElementById("main-navbar");
-      if (!navbar) return;
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 40) {
-          navbar.classList.add("shadow-lg", "shadow-black/50", "bg-opacity-95");
-          navbar.classList.remove("bg-opacity-80");
-        } else {
-          navbar.classList.remove("shadow-lg", "shadow-black/50", "bg-opacity-95");
-          navbar.classList.add("bg-opacity-80");
-        }
       });
     }
     function initCurrentYear() {
