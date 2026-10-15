@@ -23,3 +23,7 @@ remove_*.js
 lovable_*
 __l5e/
 test-*.png
+
+assets/images/
+css/
+js/
