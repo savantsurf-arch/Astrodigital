@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Digital + RabiscaAI | Parceria Tecnológica para Food Service & Empresas</title>
+  <meta name="description" content="A Astro Digital e a RabiscaAI unem tecnologia e soluções digitais para ajudar empresas e estabelecimentos do setor alimentício a evoluir, melhorar sua presença digital e otimizar suas operações.">
+  <meta name="theme-color" content="#030605">
+  
+  <link rel="icon" type="image/jpeg" href="assets/astro-digital-logo.png">
+  
+  <!-- Open Graph / Social Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Astro Digital + RabiscaAI | Parceria Tecnológica">
+  <meta property="og:description" content="Duas soluções. Mais possibilidades para o seu negócio. Presença digital estratégica e gestão eficiente de pedidos.">
+  <meta property="og:image" content="assets/rabiscaai-og-cover.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              deep: '#030605',
+              surface: '#07100A',
+              card: '#0a160e',
+              neon: '#39FF14',
+              green: '#18E65C',
+              darkgreen: '#063D20',
+              gray: '#D8D8D8'
+            },
+            rabisca: {
+              orange: '#FF5A1F',
+              hover: '#E04810',
+              amber: '#FF7A00',
+              gold: '#B8874B',
+              dark: '#080E1A',
+              surface: '#0F172A',
+              border: '#1E293B'
+            }
+          },
+          fontFamily: {
+            sans: ['"Manrope"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            brand: ['"Poppins"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            handwriting: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Global Base Stylesheet -->
+  <link rel="stylesheet" href="assets/styles-Bp2NndaP.css">
+  
+  <style>
+    body {
+      background-color: #030605;
+      color: #D8D8D8;
+      font-family: 'Manrope', sans-serif;
+      overflow-x: hidden;
+    }
+    .neon-text {
+      color: #39FF14;
+      text-shadow: 0 0 14px rgba(57, 255, 20, 0.6), 0 0 28px rgba(24, 230, 92, 0.35);
+    }
+    .rabisca-text {
+      color: #FF5A1F;
+      text-shadow: 0 0 14px rgba(255, 90, 31, 0.6), 0 0 28px rgba(255, 122, 0, 0.35);
+    }
+    .partner-glow {
+      background: radial-gradient(circle at 50% 50%, rgba(57, 255, 20, 0.08) 0%, rgba(255, 90, 31, 0.08) 50%, transparent 75%);
+    }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(10, 22, 14, 0.85) 0%, rgba(3, 6, 5, 0.95) 100%);
+      border: 1px solid rgba(57, 255, 20, 0.22);
+      backdrop-filter: blur(16px);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: #39FF14;
+      box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(57, 255, 20, 0.2);
+      transform: translateY(-4px);
+    }
+    .rabisca-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.75) 0%, rgba(3, 6, 5, 0.95) 100%);
+      border: 1px solid rgba(255, 90, 31, 0.25);
+      backdrop-filter: blur(16px);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .rabisca-card:hover {
+      border-color: #FF5A1F;
+      box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 90, 31, 0.25);
+      transform: translateY(-4px);
+    }
+    .connector-badge {
+      position: relative;
+      background: linear-gradient(90deg, rgba(57, 255, 20, 0.15) 0%, rgba(255, 90, 31, 0.15) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .brand {
+      display: inline-flex !important;
+      align-items: center !important;
+      height: 48px !important;
+      width: auto !important;
+      max-width: 180px !important;
+      overflow: visible !important;
+    }
+    .brand img {
+      object-fit: contain !important;
+      object-position: left center !important;
+      width: auto !important;
+      height: 42px !important;
+      max-height: 42px !important;
+      max-width: 100% !important;
+      display: block !important;
+    }
+    /* Mobile drawer transition */
+    #mobileMenu {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-[#030605] text-[#D8D8D8]">
+
+  <!-- HEADER -->
+  <header class="site-header is-scrolled fixed top-0 left-0 w-full z-50 bg-[#030605]/95 backdrop-blur-md border-b border-[#063D20]">
+    <div class="header-inner max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a class="brand" href="index.html" aria-label="Astro Digital — Início">
+        <img src="assets/astro-digital-logo.png" alt="Astro Digital" class="h-9 w-auto">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="main-nav hidden lg:flex items-center gap-7 text-xs uppercase tracking-wider font-semibold">
+        <a href="index.html#inicio" class="text-neutral-400 hover:text-white transition-colors">Início</a>
+        <a href="index.html#servicos" class="text-neutral-400 hover:text-white transition-colors">Serviços</a>
+        <a href="portfolio.html" class="text-neutral-400 hover:text-white transition-colors">Portfólio</a>
+        <a href="parceria.html" class="text-[#39FF14] border-b-2 border-[#39FF14] pb-1 font-bold flex items-center gap-1.5">
+          <span>Parceria RabiscaAI</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#FF5A1F] animate-ping"></span>
+        </a>
+        <a href="index.html#sobre" class="text-neutral-400 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#contato" class="text-neutral-400 hover:text-white transition-colors">Contato</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FF5A1F]/40 bg-[#FF5A1F]/10 text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all text-xs font-bold">
+          <img src="assets/rabiscaai-mark.png" alt="RabiscaAI" class="h-4 w-auto">
+          <span>RabiscaAI</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-neutral-300"></i>
+        </a>
+        <a class="button button-outline header-cta inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#39FF14] text-white hover:bg-[#39FF14] hover:text-[#030605] transition-all text-xs font-bold" href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Parceria%20Astro%20Digital%20%2B%20RabiscaAI." target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-whatsapp text-sm text-[#39FF14]"></i>
+          <span>Fale conosco</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" type="button" class="lg:hidden p-2 rounded-lg text-neutral-300 hover:text-white hover:bg-[#07100A] border border-[#063D20]" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-[#063D20] bg-[#07100A]/95 px-6 py-6 space-y-4">
+      <a href="index.html#inicio" class="block text-sm font-semibold text-neutral-300 hover:text-white">Início</a>
+      <a href="index.html#servicos" class="block text-sm font-semibold text-neutral-300 hover:text-white">Serviços</a>
+      <a href="portfolio.html" class="block text-sm font-semibold text-neutral-300 hover:text-white">Portfólio</a>
+      <a href="parceria.html" class="block text-sm font-bold text-[#39FF14]">Parceria RabiscaAI</a>
+      <a href="index.html#sobre" class="block text-sm font-semibold text-neutral-300 hover:text-white">Sobre</a>
+      <a href="index.html#contato" class="block text-sm font-semibold text-neutral-300 hover:text-white">Contato</a>
+      <div class="pt-4 border-t border-[#063D20] flex flex-col gap-3">
+        <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#FF5A1F] text-white font-bold text-xs">
+          <span>Conhecer a RabiscaAI</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+        <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Parceria%20Astro%20Digital%20%2B%20RabiscaAI." target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full border border-[#39FF14] text-[#39FF14] font-bold text-xs">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>Fale com a Astro Digital</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="relative pt-32 pb-24 overflow-hidden">
+    
+    <!-- Ambient Dual Background Glow -->
+    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[600px] pointer-events-none partner-glow opacity-80 blur-3xl -z-10"></div>
+
+    <!-- ========================================== -->
+    <!-- 1. HERO — DESTAQUE DA PARCERIA            -->
+    <!-- ========================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 text-center pt-8 pb-16 lg:pb-24">
+      
+      <!-- Discreet Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-700/80 bg-[#07100A]/90 shadow-lg mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#39FF14] animate-pulse"></span>
+        <span class="text-[11px] font-mono tracking-widest text-[#39FF14] uppercase font-bold">PARCERIA TECNOLÓGICA</span>
+        <span class="text-neutral-500">•</span>
+        <span class="text-[11px] font-mono tracking-widest text-[#FF5A1F] uppercase font-bold">FOOD SERVICE & DIGITAL</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6">
+        Duas soluções. <br>
+        <span class="neon-text">Mais possibilidades</span> para o seu negócio.
+      </h1>
+
+      <!-- Support Text -->
+      <p class="text-base sm:text-lg lg:text-xl text-neutral-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+        A <strong>Astro Digital</strong> e a <strong>RabiscaAI</strong> unem tecnologia e soluções digitais para ajudar empresas a evoluir, melhorar sua presença digital e otimizar suas operações.
+      </p>
+
+      <!-- Co-Branding Connector Box -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-8 px-6 py-4 rounded-3xl connector-badge shadow-2xl mb-10">
+        
+        <!-- Astro Digital Side -->
+        <div class="flex items-center gap-3">
+          <img src="assets/astro-digital-logo.png" alt="Astro Digital" class="h-8 sm:h-9 w-auto">
+          <div class="text-left hidden sm:block">
+            <span class="block text-[10px] font-mono uppercase tracking-widest text-neutral-400">Presença & Criação</span>
+            <span class="block text-xs font-bold text-[#39FF14]">Astro Digital</span>
+          </div>
+        </div>
+
+        <!-- Animated Center Plus Symbol -->
+        <div class="w-9 h-9 rounded-full bg-[#030605] border border-white/20 flex items-center justify-center text-white font-black text-sm shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+          <i class="fa-solid fa-plus text-[#39FF14]"></i>
+        </div>
+
+        <!-- RabiscaAI Side -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2">
+            <img src="assets/rabiscaai-mark.png" alt="RabiscaAI Mark" class="h-8 w-auto">
+            <span class="font-brand text-lg sm:text-xl font-bold tracking-tight text-white">
+              Rabisca<span class="text-[#FF5A1F]">AI</span>
+            </span>
+          </div>
+          <div class="text-left hidden sm:block">
+            <span class="block text-[10px] font-mono uppercase tracking-widest text-neutral-400">CRM & Gestão de Pedidos</span>
+            <span class="block text-xs font-bold text-[#FF5A1F]">RabiscaAI</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto mb-16">
+        
+        <!-- Primary Button: Conheça a RabiscaAI -->
+        <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#FF5A1F] hover:bg-[#ff6f3b] text-white font-extrabold text-sm transition-all shadow-[0_0_30px_rgba(255,90,31,0.45)] group">
+          <span>Conheça a RabiscaAI</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        </a>
+
+        <!-- Secondary Button: Fale com a Astro Digital -->
+        <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Parceria%20Astro%20Digital%20%2B%20RabiscaAI." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border border-[#39FF14] text-white hover:bg-[#39FF14] hover:text-[#030605] font-extrabold text-sm transition-all shadow-[0_0_20px_rgba(57,255,20,0.25)]">
+          <i class="fa-brands fa-whatsapp text-base text-[#39FF14] group-hover:text-[#030605]"></i>
+          <span>Fale com a Astro Digital</span>
+        </a>
+
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-neutral-700/60 bg-[#07100A] p-2 sm:p-4 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9)]">
+        
+        <!-- Window Bar -->
+        <div class="flex items-center justify-between px-4 py-2 border-b border-neutral-800 bg-[#030605]/80 rounded-t-2xl mb-2">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+          </div>
+          <div class="text-[11px] font-mono text-neutral-400 flex items-center gap-2">
+            <i class="fa-solid fa-lock text-xs text-[#39FF14]"></i>
+            <span>rabiscaai.com.br — Painel de Gestão & Pedidos</span>
+          </div>
+          <div class="text-[10px] font-mono text-neutral-500 hidden sm:block">
+            FOOD SERVICE CRM
+          </div>
+        </div>
+
+        <!-- Preview Image -->
+        <div class="relative rounded-2xl overflow-hidden group">
+          <img src="assets/rabiscaai-og-cover.png" alt="RabiscaAI CRM para Restaurantes - Gestão de Pedidos, iFood e WhatsApp" class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-700">
+          
+          <!-- Subtle Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030605]/80 via-transparent to-transparent pointer-events-none"></div>
+
+          <!-- Interactive Highlights Pills on bottom -->
+          <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-center sm:justify-start gap-2.5">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#030605]/90 border border-[#FF5A1F]/50 text-white text-xs font-semibold backdrop-blur-md">
+              <img src="assets/rabiscaai-ifood.svg" alt="iFood" class="h-3.5 w-auto"> iFood Oficial
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#030605]/90 border border-green-500/50 text-white text-xs font-semibold backdrop-blur-md">
+              <img src="assets/rabiscaai-whatsapp.svg" alt="WhatsApp" class="h-3.5 w-auto"> WhatsApp Centralizado
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#030605]/90 border border-[#39FF14]/50 text-[#39FF14] text-xs font-semibold backdrop-blur-md">
+              <i class="fa-solid fa-columns-3"></i> Pipeline Kanban
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#030605]/90 border border-yellow-500/50 text-yellow-300 text-xs font-semibold backdrop-blur-md">
+              <i class="fa-solid fa-percent"></i> 0% de Comissão na Vitrine
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. SEÇÃO — CONHEÇA A RABISCAAI            -->
+    <!-- ========================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16 border-t border-[#063D20]/60">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#FF5A1F]/30 bg-[#FF5A1F]/10 mb-4">
+          <img src="assets/rabiscaai-mark.png" alt="RabiscaAI" class="h-3.5 w-auto">
+          <span class="text-xs font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">TECNOLOGIA PARA FOOD SERVICE</span>
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight mb-5">
+          Conheça a <span class="rabisca-text">RabiscaAI</span>
+        </h2>
+        
+        <p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed">
+          Desenvolvida especialmente para <strong>restaurantes, lanchonetes, hamburguerias, pizzarias e deliveries</strong>, a RabiscaAI é uma plataforma de CRM e gestão que centraliza pedidos de múltiplos canais em um único painel ágil e intuitivo.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid (Confirmed Official Features Only) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Card 1: Pipeline Kanban Multicanal -->
+        <div class="rabisca-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 flex items-center justify-center text-[#FF5A1F] text-xl mb-5">
+              <i class="fa-solid fa-table-columns"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">GESTÃO VISUAL</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Pipeline Kanban de Pedidos</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              Todos os pedidos chegam em um quadro unificado. Acompanhe cada etapa da esteira operacional em colunas em tempo real: Novos, Em Atendimento, Cozinha, Entrega e Concluídos.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center gap-2 text-xs text-neutral-400">
+            <i class="fa-solid fa-circle-check text-[#FF5A1F]"></i>
+            <span>Fim dos pedidos perdidos ou esquecidos</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Integração Oficial iFood & 99Food -->
+        <div class="rabisca-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 flex items-center justify-center text-[#FF5A1F] text-xl mb-5">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">INTEGRAÇÕES HOMOLOGADAS</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">APIs Oficiais iFood & 99Food</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              Parceiro homologado que conecta diretamente aos marketplaces. Os pedidos dos canais externos entram automaticamente no seu funil, mudando de status sincronizados com os clientes.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center gap-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#030605] border border-neutral-800 text-[11px] text-neutral-300 font-medium">
+              <img src="assets/rabiscaai-ifood.svg" alt="iFood" class="h-3 w-auto"> iFood
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#030605] border border-neutral-800 text-[11px] text-neutral-300 font-medium">
+              <img src="assets/rabiscaai-99food.png" alt="99Food" class="h-3 w-auto"> 99Food
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 3: WhatsApp Centralizado & Multi-Atendente -->
+        <div class="rabisca-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 flex items-center justify-center text-[#FF5A1F] text-xl mb-5">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">ATENDIMENTO COMERCIAL</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">WhatsApp Multi-Atendente</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              Conexão por QR Code como aparelho vinculado ao WhatsApp comercial da sua loja. Toda a sua equipe atende em uma mesma caixa de entrada organizada, sem disputa de aparelhos.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center gap-2 text-xs text-neutral-400">
+            <i class="fa-solid fa-circle-check text-green-400"></i>
+            <span>Histórico de mensagens salvo no cliente</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Cardápio Digital & Vitrine Própria -->
+        <div class="rabisca-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 flex items-center justify-center text-[#FF5A1F] text-xl mb-5">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">CANAL DIRETO</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Cardápio Digital (0% Comissão)</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              Vitrine própria para colocar no link da bio do Instagram e enviar no WhatsApp. Receba pedidos direto dos seus clientes sem pagar comissão sobre as vendas.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center gap-2 text-xs text-neutral-400">
+            <i class="fa-solid fa-tag text-yellow-400"></i>
+            <span>Cálculo de taxa fixa, por km ou por bairro</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Cozinha & Impressão Automática -->
+        <div class="rabisca-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 flex items-center justify-center text-[#FF5A1F] text-xl mb-5">
+              <i class="fa-solid fa-print"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">AGILIDADE NA PRODUÇÃO</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Impressão Automática de Comandas</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              Assim que o pedido é aceito no sistema, a comanda é enviada diretamente para a impressora térmica da cozinha ou bar, acelerando o tempo de preparo e reduzindo falhas manuais.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center gap-2 text-xs text-neutral-400">
+            <i class="fa-solid fa-fire text-orange-400"></i>
+            <span>Comunicação direta com a produção</span>
+          </div>
+        </div>
+
+        <!-- Card 6: CRM de Clientes, Fidelidade & Financeiro -->
+        <div class="rabisca-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#FF5A1F]/15 border border-[#FF5A1F]/30 flex items-center justify-center text-[#FF5A1F] text-xl mb-5">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#FF5A1F] uppercase">INTELIGÊNCIA & CAIXA</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">CRM, Fidelização & Caixa</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-4">
+              Histórico detalhado de consumo por cliente, cupons e cashback para incentivar novas compras. Fechamento de caixa com sangrias, suprimentos e controle financeiro integrado.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center gap-2 text-xs text-neutral-400">
+            <i class="fa-solid fa-coins text-yellow-500"></i>
+            <span>Contas a pagar, receber e DRE simplificado</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Features Bar -->
+      <div class="mt-12 p-6 rounded-2xl bg-[#07100A] border border-neutral-800 flex flex-wrap items-center justify-between gap-6 text-xs text-neutral-300">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-desktop text-[#FF5A1F] text-lg"></i>
+          <div>
+            <strong class="text-white block font-semibold">Multi-Dispositivo</strong>
+            <span>Computador, celular, maquininha e totem</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-green-400 text-lg"></i>
+          <div>
+            <strong class="text-white block font-semibold">7 Dias Grátis para Testar</strong>
+            <span>Sem necessidade de cartão de crédito e sem fidelidade</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-handshake text-[#39FF14] text-lg"></i>
+          <div>
+            <strong class="text-white block font-semibold">Suporte e Atualizações</strong>
+            <span>Plataforma em constante evolução para o food service</span>
+          </div>
+        </div>
+        <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FF5A1F] text-white font-bold hover:bg-[#ff6f3b] transition-colors ml-auto sm:ml-0">
+          <span>Acessar RabiscaAI</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 3. SEÇÃO — UMA PARCERIA QUE COMPLEMENTA SEU NEGÓCIO          -->
+    <!-- ============================================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16 border-t border-[#063D20]/60">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#39FF14]/30 bg-[#39FF14]/10 mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#39FF14]"></span>
+          <span class="text-xs font-mono font-bold tracking-widest text-[#39FF14] uppercase">ECOSSISTEMA COMPLETO</span>
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight mb-5">
+          Uma parceria que <br><span class="neon-text">complementa o seu negócio.</span>
+        </h2>
+        
+        <p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed">
+          Enquanto a <strong>RabiscaAI</strong> cuida da sua organização operacional, pedidos e atendimento, a <strong>Astro Digital</strong> projeta a presença visual e digital que atrai clientes, fortalece sua marca e gera autoridade imediata no mercado.
+        </p>
+
+        <!-- Informative Clarification Box -->
+        <div class="mt-6 p-4 rounded-xl bg-[#030605] border border-neutral-800 text-xs text-neutral-400 max-w-2xl mx-auto text-left flex items-start gap-3">
+          <i class="fa-solid fa-circle-info text-[#39FF14] text-base mt-0.5 shrink-0"></i>
+          <span>
+            <strong>Soluções que se somam:</strong> Você pode contratar as soluções de cada parceiro conforme a necessidade do seu momento. Um ecossistema onde sua empresa encontra tanto recursos para sua presença digital quanto ferramentas para suas rotinas operacionais.
+          </span>
+        </div>
+      </div>
+
+      <!-- Services Complementarity Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Service 1: Sites Profissionais -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/60 border border-[#39FF14]/40 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">AUTORIDADE & MARCA</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Criação de Sites Profissionais</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Desenvolvimento de sites institucionais modernos, responsivos e velozes para restaurantes, buffets, franquias e empresas que desejam transmitir profissionalismo.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Cria%C3%A7%C3%A3o%20de%20Site%20com%20a%20Astro%20Digital." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            <span>Falar com Astro Digital</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Service 2: Landing Pages -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/60 border border-[#39FF14]/40 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">ALTA CONVERSÃO</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Desenvolvimento de Landing Pages</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Páginas focadas em conversão rápida para lançamentos gastronômicos, promoções pontuais, eventos especiais e captação de clientes para o WhatsApp.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Landing%20Page%20com%20a%20Astro%20Digital." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            <span>Falar com Astro Digital</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Service 3: Design & Materiais Publicitários -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/60 border border-[#39FF14]/40 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">IDENTIDADE & COMUNICAÇÃO</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Design e Materiais Publicitários</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Artes promocionais para redes sociais, criativos para anúncios, cardápios visuais de alto impacto, embalagens personalizadas e identidade visual completa.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Design%20e%20Artes%20com%20a%20Astro%20Digital." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            <span>Falar com Astro Digital</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Service 4: Edição de Vídeos -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/60 border border-[#39FF14]/40 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">REELS & CONTEÚDOS</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Edição de Vídeos & Redes Sociais</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Vídeos institucionais e reels gastronômicos dinâmicos que despertam o apetite do público, geram retenção alta e fortalecem o engajamento no Instagram e TikTok.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Edi%C3%A7%C3%A3o%20de%20V%C3%ADdeos%20com%20a%20Astro%20Digital." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            <span>Falar com Astro Digital</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Service 5: Displays Inteligentes NFC Google -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/60 border border-[#39FF14]/40 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">TECNOLOGIA DE MESA & BALCÃO</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Displays NFC & QR Code Google</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Placas e totens em acrílico cristal com aproximação NFC Contactless para mesas e balcões: facilite avaliações 5 estrelas no Google e conecte o cliente ao seu cardápio instantaneamente.
+            </p>
+          </div>
+          <a href="portfolio.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            <span>Ver Modelos no Portfólio</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Service 6: Soluções Digitais Sob Medida -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/60 border border-[#39FF14]/40 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-code-merge"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">CONSULTORIA & SOLUÇÕES</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Soluções Digitais Personalizadas</h3>
+            <p class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Diagnóstico individual da maturidade digital da sua empresa para definir quais canais, plataformas e materiais farão a maior diferença nos seus resultados.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20consultoria%20digital%20com%20a%20Astro%20Digital." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            <span>Solicitar Diagnóstico</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. SEÇÃO — CHAMADA PARA AÇÃO (CTA)        -->
+    <!-- ========================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 mt-12 mb-8">
+      
+      <div class="relative rounded-3xl overflow-hidden border border-neutral-700 bg-gradient-to-br from-[#0c1a11] via-[#07100A] to-[#120e0a] p-8 sm:p-14 lg:p-16 shadow-[0_0_60px_rgba(57,255,20,0.15)] text-center">
+        
+        <!-- Background Glow Orbs -->
+        <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-[#39FF14]/15 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-[#FF5A1F]/15 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-black/40 mb-6">
+            <span class="text-[11px] font-mono uppercase tracking-widest text-neutral-300 font-bold">CRESCIMENTO & RESULTADOS</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display mb-4 tracking-tight">
+            Seu negócio pode dar o próximo passo.
+          </h2>
+          
+          <p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+            Conheça as soluções da nossa parceria e descubra quais ferramentas fazem sentido para a sua empresa.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            
+            <!-- Conhecer a RabiscaAI -->
+            <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#FF5A1F] hover:bg-[#ff6f3b] text-white font-extrabold text-sm transition-all shadow-[0_0_25px_rgba(255,90,31,0.5)]">
+              <img src="assets/rabiscaai-mark.png" alt="RabiscaAI" class="h-4 w-auto">
+              <span>Conhecer a RabiscaAI</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+
+            <!-- Solicitar atendimento à Astro Digital -->
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20atendimento%20com%20a%20Astro%20Digital%20a%20respeito%20da%20parceria%20com%20a%20RabiscaAI." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Solicitar atendimento à Astro Digital</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+          <!-- Small disclaimer -->
+          <p class="mt-8 text-xs text-neutral-400 font-light">
+            Soluções comerciais e operacionais independentes integradas ao ecossistema de parceiros Astro Digital.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer border-t border-[#063D20] py-12 bg-[#030605]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-neutral-800">
+        
+        <!-- Left Brands -->
+        <div class="flex items-center gap-6">
+          <a class="brand" href="index.html">
+            <img src="assets/astro-digital-logo.png" alt="Astro Digital" class="h-8 w-auto">
+          </a>
+          <span class="text-neutral-600 font-bold">•</span>
+          <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="flex items-center gap-2 text-white hover:text-[#FF5A1F] transition-colors">
+            <img src="assets/rabiscaai-mark.png" alt="RabiscaAI" class="h-6 w-auto">
+            <span class="font-brand font-bold text-sm tracking-tight">Rabisca<span class="text-[#FF5A1F]">AI</span></span>
+          </a>
+        </div>
+
+        <!-- Links -->
+        <nav class="flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-400">
+          <a href="index.html#inicio" class="hover:text-white transition-colors">Início</a>
+          <a href="index.html#servicos" class="hover:text-white transition-colors">Serviços</a>
+          <a href="portfolio.html" class="hover:text-white transition-colors">Portfólio</a>
+          <a href="parceria.html" class="text-[#39FF14] font-semibold">Parceria RabiscaAI</a>
+          <a href="index.html#sobre" class="hover:text-white transition-colors">Sobre</a>
+          <a href="index.html#contato" class="hover:text-white transition-colors">Contato</a>
+          <a href="https://www.instagram.com/astro_digital01/" target="_blank" rel="noreferrer" class="hover:text-[#39FF14] transition-colors flex items-center gap-1.5"><i class="fa-brands fa-instagram text-[#39FF14]"></i> Instagram</a>
+          <a href="https://www.rabiscaai.com.br/" target="_blank" rel="noreferrer" class="text-[#FF5A1F] hover:underline flex items-center gap-1">
+            Site RabiscaAI <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        </nav>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono">
+        <div>
+          © 2026 Astro Digital. Todos os direitos reservados.
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span>Astro Digital</span>
+          <span class="text-[#39FF14]">•</span>
+          <span>RabiscaAI</span>
+          <span class="text-[#FF5A1F]">•</span>
+          <span>Parceria Tecnológica</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu Toggle -->
+  <script>
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Astro Digital — Ideias, Tecnologia e Resultados</title>
+  <meta name="description" content="Confira o portfólio da Astro Digital: Displays Inteligentes NFC, Placas de Avaliação Google, Sites, Landing Pages, Edição de Vídeos e Artes.">
+  <meta name="theme-color" content="#030605">
+  
+  <link rel="icon" type="image/jpeg" href="assets/astro-digital-logo.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            astro: {
+              deep: '#030605',
+              surface: '#07100A',
+              neon: '#39FF14',
+              green: '#18E65C',
+              darkgreen: '#063D20',
+              gray: '#D8D8D8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Manrope"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            handwriting: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/styles-Bp2NndaP.css">
+  
+  <style>
+    body {
+      background-color: #030605;
+      color: #D8D8D8;
+      font-family: 'Manrope', sans-serif;
+      overflow-x: hidden;
+    }
+    .neon-text {
+      color: #39FF14;
+      text-shadow: 0 0 12px rgba(57, 255, 20, 0.6), 0 0 25px rgba(24, 230, 92, 0.3);
+    }
+    .filter-btn {
+      transition: all 0.25s ease;
+    }
+    .filter-btn.active {
+      background-color: #39FF14;
+      color: #030605;
+      font-weight: 700;
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+    }
+    .showcase-box {
+      border: 1px solid rgba(57, 255, 20, 0.35);
+      background: linear-gradient(180deg, #07100A 0%, #030605 100%);
+      box-shadow: 0 0 40px rgba(6, 61, 32, 0.45);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .showcase-box:hover {
+      border-color: #39FF14;
+      box-shadow: 0 0 50px rgba(57, 255, 20, 0.25);
+    }
+    .portfolio-card {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      border-color: #39FF14;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8), 0 0 20px rgba(57, 255, 20, 0.2);
+    }
+    .brand {
+      display: inline-flex !important;
+      align-items: center !important;
+      height: 48px !important;
+      width: auto !important;
+      max-width: 180px !important;
+      overflow: visible !important;
+    }
+    .brand img {
+      object-fit: contain !important;
+      object-position: left center !important;
+      width: auto !important;
+      height: 42px !important;
+      max-height: 42px !important;
+      max-width: 100% !important;
+      display: block !important;
+    }
+  </style>
+</head>
+<body class="bg-[#030605] text-[#D8D8D8]">
+
+  <!-- HEADER -->
+  <header class="site-header is-scrolled fixed top-0 left-0 w-full z-50 bg-[#030605]/90 backdrop-blur-md border-b border-[#063D20]">
+    <div class="header-inner max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <a class="brand" href="index.html" aria-label="Astro Digital — início">
+        <img src="assets/astro-digital-logo.png" alt="Astro Digital" class="h-9 w-auto">
+      </a>
+      <nav class="main-nav hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a href="index.html#inicio" class="text-neutral-400 hover:text-white transition-colors">Início</a>
+        <a href="index.html#servicos" class="text-neutral-400 hover:text-white transition-colors">Serviços</a>
+        <a href="portfolio.html" class="text-[#39FF14] border-b-2 border-[#39FF14] pb-1">Portfólio</a>
+        <a href="parceria.html" class="text-neutral-400 hover:text-white transition-colors flex items-center gap-1">
+          <span>Parceria</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]"></span>
+        </a>
+        <a href="index.html#sobre" class="text-neutral-400 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#contato" class="text-neutral-400 hover:text-white transition-colors">Contato</a>
+      </nav>
+      <a class="button button-outline header-cta hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#39FF14] text-white hover:bg-[#39FF14] hover:text-[#030605] transition-all text-xs font-bold" href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Portf%C3%B3lio%20da%20Astro%20Digital." target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-whatsapp text-sm text-[#39FF14]"></i> Fale conosco
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-32 pb-24">
+    
+    <!-- PORTFOLIO HERO -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#07100A] mb-4">
+        <span class="w-2 h-2 rounded-full bg-[#39FF14] animate-pulse"></span>
+        <span class="text-xs font-mono tracking-widest text-[#39FF14] uppercase font-bold">PORTFÓLIO ASTRO DIGITAL</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display mb-6 tracking-tight">
+        Projetos reais que <br><span class="neon-text">geram resultados.</span>
+      </h1>
+      <p class="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto font-light leading-relaxed">
+        Confira nossos trabalhos e soluções de alta performance: Displays inteligentes NFC Google, criação de sites, landing pages, edição de vídeos e artes.
+      </p>
+
+      <!-- FILTER BUTTONS -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mt-10" id="filterContainer">
+        <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold border border-[#063D20] bg-[#07100A] text-neutral-300 hover:border-[#39FF14]" data-filter="all">
+          Todos os Projetos
+        </button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-[#063D20] bg-[#07100A] text-neutral-300 hover:border-[#39FF14]" data-filter="nfc">
+          Placas & Tags NFC Google
+        </button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-[#063D20] bg-[#07100A] text-neutral-300 hover:border-[#39FF14]" data-filter="web">
+          Sites & Landing Pages
+        </button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-[#063D20] bg-[#07100A] text-neutral-300 hover:border-[#39FF14]" data-filter="video">
+          Edição de Vídeos
+        </button>
+        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-[#063D20] bg-[#07100A] text-neutral-300 hover:border-[#39FF14]" data-filter="design">
+          Design & Identidade Visual
+        </button>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SHOWCASE SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      
+      <!-- MODEL 1: FLASHNET TELECOM SMART STANDS -->
+      <div class="portfolio-item showcase-box rounded-3xl p-6 sm:p-10 lg:p-12" data-category="nfc">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#39FF14]/30 shadow-2xl group">
+            <img src="assets/flashnet-nfc-studio.jpg" alt="Displays em Acrílico NFC Flashnet Telecom" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#030605] mb-3">
+              <span class="text-[11px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">MODELO 01 • CASE REAL</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display mb-3">
+              Displays NFC Inteligentes <br><span class="neon-text">Flashnet Telecom</span>
+            </h2>
+            
+            <p class="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Produção de displays em acrílico cristal premium personalizados com a marca do cliente. Integração com <strong>chip NFC Contactless</strong> e <strong>QR Code dinâmico</strong> para conexão rápida com Google Avaliações, WhatsApp e Instagram.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 w-full mb-8 text-xs text-neutral-300">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-wifi text-[#39FF14] text-sm"></i>
+                <span>NFC Contactless</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-qrcode text-[#39FF14] text-sm"></i>
+                <span>QR Code Dinâmico</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-gem text-[#39FF14] text-sm"></i>
+                <span>Acrílico Cristal Premium</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-star text-[#39FF14] text-sm"></i>
+                <span>Google 5 Estrelas</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20Display%20NFC%20personalizado%20como%20o%20da%20Flashnet." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>SOLICITAR ESTE MODELO</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MODEL 2: GOOGLE NFC + QR CODE DISPLAY CARDS (BLACK & WHITE) -->
+      <div class="portfolio-item showcase-box rounded-3xl p-6 sm:p-10 lg:p-12" data-category="nfc">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#39FF14]/30 shadow-2xl group">
+            <img src="assets/google-nfc-cards-studio.jpg" alt="Placas de Mesa Google NFC e QR Code Black & White" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#030605] mb-3">
+              <span class="text-[11px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">MODELO 02 • BLACK & WHITE</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display mb-3">
+              Placas Google Duplas <br><span class="neon-text">NFC + QR Code</span>
+            </h2>
+            
+            <p class="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Displays verticais disponíveis em acabamento <strong>Black Piano</strong> ou <strong>White Minimalist</strong> com moldura colorida oficial do Google. Dupla tecnologia com aproximação NFC e leitura direta por câmera QR Code.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 w-full mb-8 text-xs text-neutral-300">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-mobile-screen-button text-[#39FF14] text-sm"></i>
+                <span>Aproxime seu Celular</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-camera text-[#39FF14] text-sm"></i>
+                <span>Aponte sua Câmera</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-circle-half-stroke text-[#39FF14] text-sm"></i>
+                <span>Preto ou Branco</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-chart-line text-[#39FF14] text-sm"></i>
+                <span>+ Avaliações Reais</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20a%20Placa%20Google%20NFC%2BQR%20Code%20(Modelo%20Preto%2FBranco)." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>SOLICITAR ESTE MODELO</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MODEL 3: GOOGLE L-SHAPED INCLINED DESKTOP STANDS -->
+      <div class="portfolio-item showcase-box rounded-3xl p-6 sm:p-10 lg:p-12" data-category="nfc">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#39FF14]/30 shadow-2xl group">
+            <img src="assets/google-l-displays-studio.jpg" alt="Displays em L Inclinados Google Avalie-nos" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#030605] mb-3">
+              <span class="text-[11px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">MODELO 03 • SUPORTE EM L</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display mb-3">
+              Displays em L Inclinados <br><span class="neon-text">"Avalie-nos no Google"</span>
+            </h2>
+            
+            <p class="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Design ergonômico inclinado em formato L perfeito para balcões de atendimento, mesas de restaurantes, recepções e caixas. Visual limpo com aproximação superior e mensagem de engajamento do cliente.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 w-full mb-8 text-xs text-neutral-300">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-arrows-up-to-line text-[#39FF14] text-sm"></i>
+                <span>Suporte Inclinado em L</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-hand-holding-heart text-[#39FF14] text-sm"></i>
+                <span>Engajamento Imediato</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-store text-[#39FF14] text-sm"></i>
+                <span>Ideal para Balcão/Caixa</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-bolt text-[#39FF14] text-sm"></i>
+                <span>Chip NFC de Alta Resposta</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20o%20Display%20em%20L%20Inclinado%20Google%20NFC." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>SOLICITAR ESTE MODELO</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEB CASE 1: VALOR CONDOCOMPANY -->
+      <div class="portfolio-item showcase-box rounded-3xl p-6 sm:p-10 lg:p-12" data-category="web">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#39FF14]/30 shadow-2xl group">
+            <img src="assets/valor-condo-mockup.jpg" alt="Landing Page Valor Condocompany" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#030605] mb-3">
+              <span class="text-[11px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">WEB & BPO • CASE REAL</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display mb-3">
+              Plataforma & Landing Page <br><span class="neon-text">Valor Condocompany</span>
+            </h2>
+            
+            <p class="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Desenvolvimento de landing page de alta conversão para gestão e BPO condominial. Conta com formulário inteligente de proposta personalizada multi-etapas, integração direta com WhatsApp comercial e agendamento de diagnóstico em tempo real.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 w-full mb-8 text-xs text-neutral-300">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-list-check text-[#39FF14] text-sm"></i>
+                <span>Formulário Inteligente</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-brands fa-whatsapp text-[#39FF14] text-sm"></i>
+                <span>Integração WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-gauge-high text-[#39FF14] text-sm"></i>
+                <span>Velocidade Ultra Rápida</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-mobile-screen text-[#39FF14] text-sm"></i>
+                <span>100% Responsivo</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20projeto%20de%20Landing%20Page%20no%20estilo%20Valor%20Condocompany." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>SOLICITAR PROJETO WEB</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEB CASE 2: DUARTE GESTOR DE TRÁFEGO -->
+      <div class="portfolio-item showcase-box rounded-3xl p-6 sm:p-10 lg:p-12" data-category="web">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#39FF14]/30 shadow-2xl group">
+            <img src="assets/duarte-trafego-mockup.jpg" alt="Landing Page Duarte Gestor de Tráfego" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#030605] mb-3">
+              <span class="text-[11px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">HIGH CONVERSION • CASE REAL</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display mb-3">
+              Landing Page de Conversão <br><span class="neon-text">Duarte Tráfego Pago</span>
+            </h2>
+            
+            <p class="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Página de vendas de alta performance desenvolvida para consultoria de tráfego pago (Meta Ads & Google Ads). Design dark moderno com acentos em neon vibrante, storytelling persuasivo e gatilhos de conversão para geração de leads qualificados.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 w-full mb-8 text-xs text-neutral-300">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-bullseye text-[#39FF14] text-sm"></i>
+                <span>Foco em ROI & Leads</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-pen-nib text-[#39FF14] text-sm"></i>
+                <span>Copywriting Persuasivo</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-moon text-[#39FF14] text-sm"></i>
+                <span>Estética Dark Mode</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-chart-line text-[#39FF14] text-sm"></i>
+                <span>Alta Taxa de Clique</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20uma%20Landing%20Page%20de%20Alta%20Convers%C3%A3o%20como%20a%20do%20Duarte." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>SOLICITAR PROJETO WEB</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WEB CASE 3: LT AUDIOVISUAL -->
+      <div class="portfolio-item showcase-box rounded-3xl p-6 sm:p-10 lg:p-12" data-category="web video">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#39FF14]/30 shadow-2xl group">
+            <img src="assets/lt-audiovisual-mockup.jpg" alt="Website e Portfólio LT Audiovisual" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col items-start">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#063D20] bg-[#030605] mb-3">
+              <span class="text-[11px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">AUDIOVISUAL & WEB • CASE REAL</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display mb-3">
+              Portal & Portfólio <br><span class="neon-text">LT Audiovisual</span>
+            </h2>
+            
+            <p class="text-sm text-neutral-300 font-light leading-relaxed mb-6">
+              Website institucional e portfólio para produtora audiovisual especializada em vídeos de alta retenção. Estrutura imersiva com suporte multi-idiomas (PT / EN / ES), player integrado de vídeos e apresentação visual de impacto.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 w-full mb-8 text-xs text-neutral-300">
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-video text-[#39FF14] text-sm"></i>
+                <span>Vídeos de Alta Retenção</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-language text-[#39FF14] text-sm"></i>
+                <span>Multi-idiomas (PT/EN/ES)</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-clapperboard text-[#39FF14] text-sm"></i>
+                <span>Portfólio Interativo</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-3 rounded-xl bg-[#030605] border border-[#063D20]">
+                <i class="fa-solid fa-wand-magic-sparkles text-[#39FF14] text-sm"></i>
+                <span>Design Cinematográfico</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20Portal%20Web%20como%20o%20da%20LT%20Audiovisual." target="_blank" rel="noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>SOLICITAR PROJETO WEB</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GRID OF OTHER DIGITAL SERVICES -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8" id="projectsGrid">
+        
+        <!-- Project 1: Sites Institucionais -->
+        <div class="portfolio-item portfolio-card rounded-2xl bg-[#07100A] border border-[#063D20] p-6 flex flex-col justify-between" data-category="web">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/50 border border-[#39FF14]/30 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">SITES INSTITUCIONAIS</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Desenvolvimento Web High-End</h3>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed mb-6">
+              Sites institucionais ultra velozes, 100% responsivos e projetados para gerar autoridade imediata no mercado digital.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Site%20Institucional." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            Solicitar Orçamento <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Project 2: Landing Pages -->
+        <div class="portfolio-item portfolio-card rounded-2xl bg-[#07100A] border border-[#063D20] p-6 flex flex-col justify-between" data-category="web">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/50 border border-[#39FF14]/30 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">ALTA CONVERSÃO</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Landing Pages de Vendas</h3>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed mb-6">
+              Páginas focadas em conversão com copywriting persuasivo, carregamento instantâneo e integração direta ao WhatsApp.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Landing%20Page." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            Solicitar Orçamento <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Project 3: Edição de Vídeos -->
+        <div class="portfolio-item portfolio-card rounded-2xl bg-[#07100A] border border-[#063D20] p-6 flex flex-col justify-between" data-category="video">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/50 border border-[#39FF14]/30 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">VÍDEOS & REELS</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Edição Dinâmica de Vídeos</h3>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed mb-6">
+              Vídeos institucionais, comerciais e reels com retenção alta, sound design profissional e ritmo envolvente.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Edi%C3%A7%C3%A3o%20de%20V%C3%ADdeos." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            Solicitar Orçamento <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Project 4: Artes e Design -->
+        <div class="portfolio-item portfolio-card rounded-2xl bg-[#07100A] border border-[#063D20] p-6 flex flex-col justify-between" data-category="design">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/50 border border-[#39FF14]/30 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-regular fa-image"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">DESIGN & IDENTIDADE</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Artes & Identidade Visual</h3>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed mb-6">
+              Criação de banners, criativos para anúncios, posts para redes sociais e tratamento de imagens cinematográfico.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Design%20e%20Artes." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            Solicitar Orçamento <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Project 5: Cartões de Mesa NFC -->
+        <div class="portfolio-item portfolio-card rounded-2xl bg-[#07100A] border border-[#063D20] p-6 flex flex-col justify-between" data-category="nfc">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/50 border border-[#39FF14]/30 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-id-card"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">CARTÕES NFC</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Cartões de Mesa & Balcão</h3>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed mb-6">
+              Modelos verticais e horizontais perfeitos para balcões, consultórios, lojas e restaurantes.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20pedir%20Cart%C3%B5es%20de%20Mesa%20NFC." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            Solicitar Modelos <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Project 6: Chaveiros e Tags NFC -->
+        <div class="portfolio-item portfolio-card rounded-2xl bg-[#07100A] border border-[#063D20] p-6 flex flex-col justify-between" data-category="nfc">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#063D20]/50 border border-[#39FF14]/30 flex items-center justify-center text-[#39FF14] text-xl mb-5">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <span class="text-[10px] font-mono font-bold tracking-widest text-[#39FF14] uppercase">TAGS & ADESIVOS</span>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Tags & Adesivos Inteligentes</h3>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed mb-6">
+              Tags em chaveiro e adesivos com chip NFC para veículos, eventos e pontos de contato rápido.
+            </p>
+          </div>
+          <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20pedir%20Tags%20ou%20Adesivos%20NFC." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-[#39FF14] hover:underline">
+            Solicitar Modelos <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 mt-20">
+      <div class="relative rounded-3xl border border-[#39FF14]/50 bg-gradient-to-r from-[#07100A] to-[#030605] p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_0_40px_rgba(57,255,20,0.2)]">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white font-display mb-2">
+            Pronto para transformar sua ideia em realidade?
+          </h2>
+          <p class="text-sm text-neutral-300 font-light">
+            Entre em contato e solicite seu orçamento personalizado com a Astro Digital.
+          </p>
+        </div>
+        <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Gostaria%20de%20iniciar%20meu%20projeto%20com%20a%20Astro%20Digital." target="_blank" rel="noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#39FF14] text-[#030605] font-extrabold text-sm hover:bg-[#55ff33] transition-all shadow-[0_0_20px_rgba(57,255,20,0.4)] whitespace-nowrap">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>FALE CONOSCO</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer border-t border-[#063D20] py-10 bg-[#030605]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a class="brand" href="index.html">
+        <img src="assets/astro-digital-logo.png" alt="Astro Digital" class="h-8 w-auto">
+      </a>
+      <nav class="flex items-center gap-6 text-xs text-neutral-400">
+        <a href="index.html#inicio" class="hover:text-white">Início</a>
+        <a href="index.html#servicos" class="hover:text-white">Serviços</a>
+        <a href="portfolio.html" class="text-[#39FF14]">Portfólio</a>
+        <a href="parceria.html" class="hover:text-[#39FF14]">Parceria RabiscaAI</a>
+        <a href="index.html#sobre" class="hover:text-white">Sobre</a>
+        <a href="index.html#contato" class="hover:text-white">Contato</a>
+        <a href="https://www.instagram.com/astro_digital01/" target="_blank" rel="noreferrer" class="hover:text-white flex items-center gap-1.5"><i class="fa-brands fa-instagram text-[#39FF14]"></i> Instagram</a>
+      </nav>
+      <div class="text-xs text-neutral-500 font-mono">
+        © 2026 Astro Digital. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Filter JavaScript -->
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.portfolio-item');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        items.forEach(item => {
+          const cats = (item.getAttribute('data-category') || '').split(' ');
+          if (filter === 'all' || cats.includes(filter)) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
