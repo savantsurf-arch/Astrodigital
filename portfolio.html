@@ -125,6 +125,29 @@
       <a class="button button-outline header-cta hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#39FF14] text-white hover:bg-[#39FF14] hover:text-[#030605] transition-all text-xs font-bold" href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Portf%C3%B3lio%20da%20Astro%20Digital." target="_blank" rel="noreferrer">
         <i class="fa-brands fa-whatsapp text-sm text-[#39FF14]"></i> Fale conosco
       </a>
+      
+      <!-- Mobile Menu Toggle Button -->
+      <button id="portfolioMenuBtn" type="button" class="md:hidden flex items-center justify-center w-11 h-11 rounded-lg border border-[#144626] bg-[#07100A] text-[#39FF14] cursor-pointer hover:border-[#39FF14] transition-all" aria-label="Abrir menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer for portfolio.html -->
+    <div id="portfolioMobileDrawer" class="hidden md:hidden border-b border-[#063D20] bg-[#07100A]/98 backdrop-blur-xl px-6 py-5 space-y-2 shadow-2xl">
+      <a href="index.html#inicio" class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-neutral-300 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all">In�cio</a>
+      <a href="index.html#servicos" class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-neutral-300 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all">Servi�os</a>
+      <a href="portfolio.html" class="block py-2.5 px-3 rounded-lg text-sm font-bold text-[#39FF14] bg-[#39FF14]/10 border border-[#39FF14]/20">Portf�lio</a>
+      <a href="parceria.html" class="flex items-center justify-between py-2.5 px-3 rounded-lg text-sm font-semibold text-neutral-300 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all">
+        <span>Parceria RabiscaAI</span>
+        <span class="text-[10px] bg-[#FF5A1F]/20 text-[#FF5A1F] px-2 py-0.5 rounded-full font-bold">NOVO</span>
+      </a>
+      <a href="index.html#sobre" class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-neutral-300 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all">Sobre</a>
+      <a href="index.html#contato" class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-neutral-300 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all">Contato</a>
+      <div class="pt-2 border-t border-[#063D20]">
+        <a href="https://wa.me/5573982335157?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Portf%C3%B3lio%20da%20Astro%20Digital." target="_blank" rel="noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#39FF14] text-[#030605] font-bold text-sm shadow-[0_0_20px_rgba(57,255,20,0.3)]">
+          <i class="fa-brands fa-whatsapp text-base"></i> Fale conosco no WhatsApp
+        </a>
+      </div>
     </div>
   </header>
 
@@ -648,5 +671,44 @@
     });
   </script>
 
+
+  <script>
+    const pBtn = document.getElementById('portfolioMenuBtn');
+    const pDrawer = document.getElementById('portfolioMobileDrawer');
+    if (pBtn && pDrawer) {
+      const pBarsSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>';
+      const pCloseSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+
+      pBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = pDrawer.classList.contains('hidden');
+        if (isHidden) {
+          pDrawer.classList.remove('hidden');
+          pBtn.setAttribute('aria-expanded', 'true');
+          pBtn.innerHTML = pCloseSvg;
+        } else {
+          pDrawer.classList.add('hidden');
+          pBtn.setAttribute('aria-expanded', 'false');
+          pBtn.innerHTML = pBarsSvg;
+        }
+      });
+
+      pDrawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          pDrawer.classList.add('hidden');
+          pBtn.setAttribute('aria-expanded', 'false');
+          pBtn.innerHTML = pBarsSvg;
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!pDrawer.classList.contains('hidden') && !pDrawer.contains(e.target) && !pBtn.contains(e.target)) {
+          pDrawer.classList.add('hidden');
+          pBtn.setAttribute('aria-expanded', 'false');
+          pBtn.innerHTML = pBarsSvg;
+        }
+      });
+    }
+  </script>
 </body>
 </html>
