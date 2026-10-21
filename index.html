@@ -115,19 +115,19 @@
   /* Client Brands Infinite Carousel */
   .clients-carousel-section {
     position: relative;
-    padding: 34px 0 38px;
+    padding: 36px 0 40px;
     background: #030605;
-    background: linear-gradient(180deg, rgba(7, 16, 10, 0.7) 0%, rgba(3, 6, 5, 0.98) 100%);
-    border-top: 1px solid rgba(57, 255, 20, 0.12);
+    background: linear-gradient(180deg, rgba(7, 16, 10, 0.75) 0%, rgba(3, 6, 5, 0.98) 100%);
+    border-top: 1px solid rgba(57, 255, 20, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
   }
   .clients-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   .clients-eyebrow {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.55);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -145,23 +145,23 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 120px;
+    width: 140px;
     z-index: 2;
     pointer-events: none;
   }
   .marquee-fade-left {
     left: 0;
-    background: linear-gradient(to right, #030605 0%, transparent 100%);
+    background: linear-gradient(to right, #030605 0%, rgba(3, 6, 5, 0.8) 50%, transparent 100%);
   }
   .marquee-fade-right {
     right: 0;
-    background: linear-gradient(to left, #030605 0%, transparent 100%);
+    background: linear-gradient(to left, #030605 0%, rgba(3, 6, 5, 0.8) 50%, transparent 100%);
   }
   .clients-marquee-track {
     display: flex;
     width: max-content;
     gap: 20px;
-    animation: marqueeScroll 26s linear infinite;
+    animation: marqueeScroll 32s linear infinite;
     will-change: transform;
   }
   .clients-marquee-track:hover {
@@ -176,45 +176,87 @@
   .client-logo-card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-width: 180px;
-    height: 72px;
-    padding: 10px 24px;
-    border-radius: 12px;
+    gap: 14px;
+    min-width: 220px;
+    height: 76px;
+    padding: 10px 20px;
+    border-radius: 14px;
     background: rgba(7, 16, 10, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
+    flex-shrink: 0;
   }
   .client-logo-card:hover {
     border-color: #39FF14;
     background: rgba(7, 16, 10, 0.98);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 18px rgba(57, 255, 20, 0.22);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(57, 255, 20, 0.22);
     transform: translateY(-3px);
   }
+  .client-logo-img {
+    height: 44px;
+    max-width: 60px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .client-logo-card:hover .client-logo-img {
+    transform: scale(1.08);
+  }
+  .client-logo-invert {
+    filter: brightness(0) invert(1) opacity(0.9);
+  }
+  .client-logo-card:hover .client-logo-invert {
+    filter: brightness(0) invert(1) opacity(1) drop-shadow(0 0 6px rgba(57, 255, 20, 0.5));
+  }
+  .client-logo-rounded {
+    border-radius: 8px;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+  }
+  .client-logo-placeholder-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(57, 255, 20, 0.08);
+    border: 1px solid rgba(57, 255, 20, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  .client-logo-card:hover .client-logo-placeholder-icon {
+    background: rgba(57, 255, 20, 0.18);
+    border-color: #39FF14;
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.3);
+  }
+  .client-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
   .client-name {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
     transition: color 0.2s ease;
   }
   .client-logo-card:hover .client-name {
     color: #39FF14;
   }
-  .client-logo-card img {
-    max-height: 46px;
-    max-width: 140px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: all 0.3s ease;
-  }
-  .client-logo-card:hover img {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.35));
+  .client-sub {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 2px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
   }
   @keyframes marqueeScroll {
     from {
@@ -229,15 +271,26 @@
       width: 50px;
     }
     .client-logo-card {
-      min-width: 150px;
-      height: 62px;
-      padding: 8px 18px;
+      min-width: 190px;
+      height: 66px;
+      padding: 8px 16px;
+      gap: 10px;
+    }
+    .client-logo-img {
+      height: 36px;
+      max-width: 48px;
+    }
+    .client-logo-placeholder-icon {
+      width: 36px;
+      height: 36px;
     }
     .client-name {
       font-size: 12px;
     }
+    .client-sub {
+      font-size: 10px;
+    }
   }
-
   /* Mobile Menu Styles & Fixes */
   @media (max-width: 900px) {
     /* Header MUST be higher than any backdrop */
@@ -424,46 +477,150 @@
     <div class="marquee-gradient-fade marquee-fade-left"></div>
     <div class="marquee-gradient-fade marquee-fade-right"></div>
     <div class="clients-marquee-track">
-      <!-- Grupo 1 de Clientes -->
-      <div class="clients-marquee-group" id="clientsGroup1">
+
+      <!-- Grupo 1 -->
+      <div class="clients-marquee-group">
         <div class="client-logo-card">
-          <span class="client-name">FlashNet Telecom</span>
+          <img src="assets/cliente-tiago-lopes.png" alt="Estúdio Tiago Lopes" class="client-logo-img" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Estúdio Tiago Lopes</strong>
+            <span class="client-sub">Treinamento & Saúde</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">Valor Condocompany</span>
+          <img src="assets/cliente-rabiscaai.png" alt="RabiscaAI" class="client-logo-img" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">RabiscaAI</strong>
+            <span class="client-sub">Tecnologia & Food</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">Duarte Gestor de Tráfego</span>
+          <img src="assets/cliente-verena-coelho.png" alt="Verena Coelho Psicomotricista" class="client-logo-img" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Verena Coelho</strong>
+            <span class="client-sub">Psicomotricista</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">LT Audiovisual</span>
+          <img src="assets/cliente-valor-condocompany.png" alt="Valor Condocompany" class="client-logo-img client-logo-invert" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Valor Condocompany</strong>
+            <span class="client-sub">Gestão Condominial</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">RabiscaAI</span>
+          <img src="assets/cliente-gabriel-cell.jpg" alt="Gabriel Cell e Acessórios" class="client-logo-img client-logo-rounded" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Gabriel Cell</strong>
+            <span class="client-sub">Especialista em iPhones</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">Parceiros Astro Digital</span>
+          <div class="client-logo-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+          </div>
+          <div class="client-info">
+            <strong class="client-name">FlashNet Telecom</strong>
+            <span class="client-sub">Provedor & Internet</span>
+          </div>
+        </div>
+
+        <div class="client-logo-card">
+          <div class="client-logo-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
+          </div>
+          <div class="client-info">
+            <strong class="client-name">LT Audiovisual</strong>
+            <span class="client-sub">Produção de Vídeo</span>
+          </div>
+        </div>
+
+        <div class="client-logo-card">
+          <div class="client-logo-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+          </div>
+          <div class="client-info">
+            <strong class="client-name">Duarte Tráfego</strong>
+            <span class="client-sub">Tráfego Pago</span>
+          </div>
         </div>
       </div>
-      <!-- Grupo 2 Duplicado para loop infinito sem cortes -->
-      <div class="clients-marquee-group" aria-hidden="true" id="clientsGroup2">
+
+      <!-- Grupo 2 (Duplicado para loop infinito contínuo) -->
+      <div class="clients-marquee-group" aria-hidden="true">
         <div class="client-logo-card">
-          <span class="client-name">FlashNet Telecom</span>
+          <img src="assets/cliente-tiago-lopes.png" alt="Estúdio Tiago Lopes" class="client-logo-img" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Estúdio Tiago Lopes</strong>
+            <span class="client-sub">Treinamento & Saúde</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">Valor Condocompany</span>
+          <img src="assets/cliente-rabiscaai.png" alt="RabiscaAI" class="client-logo-img" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">RabiscaAI</strong>
+            <span class="client-sub">Tecnologia & Food</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">Duarte Gestor de Tráfego</span>
+          <img src="assets/cliente-verena-coelho.png" alt="Verena Coelho Psicomotricista" class="client-logo-img" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Verena Coelho</strong>
+            <span class="client-sub">Psicomotricista</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">LT Audiovisual</span>
+          <img src="assets/cliente-valor-condocompany.png" alt="Valor Condocompany" class="client-logo-img client-logo-invert" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Valor Condocompany</strong>
+            <span class="client-sub">Gestão Condominial</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">RabiscaAI</span>
+          <img src="assets/cliente-gabriel-cell.jpg" alt="Gabriel Cell e Acessórios" class="client-logo-img client-logo-rounded" loading="lazy">
+          <div class="client-info">
+            <strong class="client-name">Gabriel Cell</strong>
+            <span class="client-sub">Especialista em iPhones</span>
+          </div>
         </div>
+
         <div class="client-logo-card">
-          <span class="client-name">Parceiros Astro Digital</span>
+          <div class="client-logo-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+          </div>
+          <div class="client-info">
+            <strong class="client-name">FlashNet Telecom</strong>
+            <span class="client-sub">Provedor & Internet</span>
+          </div>
+        </div>
+
+        <div class="client-logo-card">
+          <div class="client-logo-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
+          </div>
+          <div class="client-info">
+            <strong class="client-name">LT Audiovisual</strong>
+            <span class="client-sub">Produção de Vídeo</span>
+          </div>
+        </div>
+
+        <div class="client-logo-card">
+          <div class="client-logo-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+          </div>
+          <div class="client-info">
+            <strong class="client-name">Duarte Tráfego</strong>
+            <span class="client-sub">Tráfego Pago</span>
+          </div>
         </div>
       </div>
     </div>
